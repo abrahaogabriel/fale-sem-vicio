@@ -1,73 +1,52 @@
-# React + TypeScript + Vite
+# Fale Sem Vício - Landing Page 🎙️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma landing page de alta conversão desenvolvida para o especialista **Giovanni Begossi (El Professor)**, focada em ajudar profissionais a eliminarem vícios de linguagem e dominarem a comunicação.
 
-Currently, two official plugins are available:
+![Snapshot da Hero](public/assets/bg-main.png) _(Snapshot placeholder da primeira dobra)_
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologias
 
-## React Compiler
+Este projeto foi construído utilizando as tecnologias mais modernas do ecossistema React:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+-   **React + TypeScript**: Base sólida e tipagem segura.
+-   **Vite**: Build tool extremamente rápida para desenvolvimento.
+-   **Tailwind CSS v4**: Estilização moderna e utilitária.
+-   **Framer Motion**: Animações de entrada e interações fluidas.
+-   **GSAP**: Controle preciso para animações complexas de texto.
+-   **React Bits**: Componentes de UI curados para efeitos visuais premium.
 
-## Expanding the ESLint configuration
+## ✨ Funcionalidades (Dobra 01: Hero)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+-   **Pixel-Perfect Fidelity**: Implementação rigorosa baseada no design do Figma, respeitando dimensões, espaçamentos e hierarquia visual.
+-   **Background Animado (TextType)**: Efeito de digitação que cicla entre os principais vícios de linguagem ("ÉÉÉÉÉ!", "ENTÃO...", "faz sentido?", "TIPO... TIPO").
+-   **Headline Dinâmica (BlurText)**: Animação de entrada suave com efeito de desfoque (Blur) para captar a atenção do usuário imediatamente.
+-   **CTA Animado**: Botão de chamada para ação com entrada programada e efeitos de hover.
+-   **Performance de Imagem**: Assets processados e servidos localmente para garantir carregamento instantâneo.
+-   **Responsividade Full**: Layout adaptado para diferentes tamanhos de tela (Desktop, Laptop, Mobile), garantindo que todo o conteúdo da Hero caiba no viewport (100vh).
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Instalação e Uso
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+1.  **Clone o repositório**:
+    ```bash
+    git clone [url-do-repositorio]
+    ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+2.  **Instale as dependências**:
+    ```bash
+    npm install
+    ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+3.  **Inicie o servidor de desenvolvimento**:
+    ```bash
+    npm run dev
+    ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📁 Estrutura de Pastas Úteis
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+-   `src/components/sections`: Seções principais da página (Hero, etc).
+-   `src/components/ui`: Componentes de interface e animações reutilizáveis (`BlurText`, `TextType`).
+-   `public/assets`: Imagens, ícones e máscaras otimizadas.
+
+## ✒️ Autor
+
+Desenvolvido com foco em excelência visual e performance por **Antigravity**.
