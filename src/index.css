@@ -1,0 +1,57 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Just+Another+Hand&family=Bebas_Neue&display=swap');
+
+@theme {
+  --color-brand-lime: #DEFF00;
+  --color-brand-dark: #000000;
+  --color-brand-gray: #262626;
+
+  --font-sora: "Sora", sans-serif;
+  --font-hand: "Just Another Hand", cursive;
+  --font-bebas: "Bebas Neue", sans-serif;
+
+  --radius-btn: 8px;
+  --radius-card: 14px;
+
+  --font-size-h1: 40px;
+  --font-size-btn: 20px;
+  --font-size-body-l: 22px;
+
+  /* Shadcn UI Overrides */
+  --color-background: var(--brand-dark);
+  --color-foreground: white;
+  --color-primary: var(--brand-lime);
+  --color-primary-foreground: black;
+  --color-border: var(--brand-gray);
+}
+
+@layer base {
+  :root {
+    --brand-dark: #000000;
+    --brand-lime: #DEFF00;
+    --brand-gray: #262626;
+
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --primary: 68 100% 50%;
+    --primary-foreground: 0 0% 0%;
+    --border: 0 0% 15%;
+    --radius: 0.5rem;
+  }
+
+  body {
+    @apply bg-brand-dark text-white font-sora antialiased;
+    margin: 0;
+    min-height: 100vh;
+  }
+
+  * {
+    @apply border-brand-gray;
+  }
+}
+
+@layer components {
+  .btn-outline {
+    @apply border border-brand-lime rounded-btn px-12 py-4 text-brand-lime text-[20px] font-medium transition-all hover:bg-brand-lime/10 flex items-center gap-3.5;
+  }
+}
