@@ -33,62 +33,62 @@ export function LearningSection() {
             </div>
 
             {/* Main Content Area - Radial Layout */}
-            <div className="relative w-full max-w-full md:max-w-[1440px] min-h-[500px] flex flex-col md:grid md:grid-cols-[1fr_auto_1fr] md:grid-rows-2 gap-y-16 md:gap-y-8 items-center justify-center">
+            <div className="relative w-full max-w-full md:max-w-[1800px] flex flex-col md:grid md:grid-cols-[1fr_auto_1fr] gap-y-16 md:gap-x-12 lg:gap-x-32 items-center justify-center">
 
                 {/* --- SVG LINES LAYER (Desktop Only) --- */}
                 <div className="absolute inset-0 hidden md:block pointer-events-none z-0">
                     <svg className="w-full h-full" viewBox="0 0 1000 1000" preserveAspectRatio="none">
                         {/* Top Left */}
-                        <CircuitLine pathD="M 500 500 L 350 500 L 350 250 H 240" delay={0} />
+                        <CircuitLine pathD="M 500 500 L 320 500 L 320 250 H 150" delay={0} />
                         {/* Bottom Left */}
-                        <CircuitLine pathD="M 500 500 L 350 500 L 350 750 H 240" delay={1} />
+                        <CircuitLine pathD="M 500 500 L 320 500 L 320 750 H 150" delay={1} />
                         {/* Top Right */}
-                        <CircuitLine pathD="M 500 500 L 650 500 L 650 250 H 760" delay={2} />
+                        <CircuitLine pathD="M 500 500 L 680 500 L 680 250 H 850" delay={2} />
                         {/* Bottom Right */}
-                        <CircuitLine pathD="M 500 500 L 650 500 L 650 750 H 760" delay={3} />
+                        <CircuitLine pathD="M 500 500 L 680 500 L 680 750 H 850" delay={3} />
                     </svg>
                 </div>
 
                 {/* --- LEFT COL (Cards) --- */}
-                <div className="flex flex-col gap-16 md:gap-[200px] justify-center items-end h-full z-10 w-full pr-8">
+                <div className="flex flex-col gap-16 md:gap-[150px] justify-center items-end h-full w-full pr-8">
                     {/* Top Left Card */}
-                    <div className="relative flex items-center">
+                    <div className="relative flex items-center z-20">
                         <LearningCard
                             title="Vícios de linguagem"
                             description="Você identifica e elimina os vícios que entram no meio da sua fala, quebram o raciocínio e enfraquecem sua autoridade, mesmo quando você domina o assunto."
                             delay={0.2}
                         />
                         {/* Connection Pulse Endpoint */}
-                        <div className="hidden md:block absolute -right-[43px] top-1/2 -translate-y-1/2 z-20">
+                        <div className="hidden md:block absolute -right-[43px] top-1/2 -translate-y-1/2 z-10 scale-75 lg:scale-100">
                             <PulseNode />
                         </div>
                     </div>
 
                     {/* Bottom Left Card */}
-                    <div className="relative flex items-center">
+                    <div className="relative flex items-center z-20">
                         <LearningCard
                             title="Dicção"
                             description="Você corrige problemas de articulação que fazem sua fala soar confusa, imprecisa ou difícil de acompanhar, mesmo quando a ideia é simples."
                             delay={0.4}
                         />
-                        <div className="hidden md:block absolute -right-[43px] top-1/2 -translate-y-1/2 z-20">
+                        <div className="hidden md:block absolute -right-[43px] top-1/2 -translate-y-1/2 z-10 scale-75 lg:scale-100">
                             <PulseNode />
                         </div>
                     </div>
                 </div>
 
                 {/* --- CENTER COL (Logo) --- */}
-                <div className="flex items-center justify-center p-8 z-20 h-full">
+                <div className="flex items-center justify-center p-8 z-30 h-full">
                     <div className="w-[300px] md:w-[392px] h-auto">
                         <CentralLogo />
                     </div>
                 </div>
 
                 {/* --- RIGHT COL (Cards) --- */}
-                <div className="flex flex-col gap-16 md:gap-[200px] justify-center items-start h-full z-10 w-full pl-8">
+                <div className="flex flex-col gap-16 md:gap-[150px] justify-center items-start h-full w-full pl-8">
                     {/* Top Right Card */}
-                    <div className="relative flex items-center">
-                        <div className="hidden md:block absolute -left-[43px] top-1/2 -translate-y-1/2 z-20">
+                    <div className="relative flex items-center z-20">
+                        <div className="hidden md:block absolute -left-[43px] top-1/2 -translate-y-1/2 z-10 scale-75 lg:scale-100">
                             <PulseNode />
                         </div>
                         <LearningCard
@@ -99,8 +99,8 @@ export function LearningSection() {
                     </div>
 
                     {/* Bottom Right Card */}
-                    <div className="relative flex items-center">
-                        <div className="hidden md:block absolute -left-[43px] top-1/2 -translate-y-1/2 z-20">
+                    <div className="relative flex items-center z-20">
+                        <div className="hidden md:block absolute -left-[43px] top-1/2 -translate-y-1/2 z-10 scale-75 lg:scale-100">
                             <PulseNode />
                         </div>
                         <LearningCard
