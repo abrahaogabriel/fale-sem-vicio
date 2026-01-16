@@ -1,4 +1,8 @@
 import { TestimonialCard } from "../ui/TestimonialCard";
+import imgAllan from "../../assets/allan.png";
+import imgCarlos from "../../assets/carlos.png";
+import imgSara from "../../assets/sara.png";
+import imgThiago from "../../assets/thiago.png";
 
 export function TestimonialsSection() {
     return (
@@ -18,6 +22,7 @@ export function TestimonialsSection() {
                     name="Allan Ferreira"
                     role="Professor"
                     initials="AF"
+                    imageSrc={imgAllan}
                     description={
                         <>
                             O meu objetivo principal nesse curso foi <span className="bg-[#DEFF00]/25 text-white px-1">simplesmente melhorar minha dicção</span>, porque eu sempre <span className="bg-[#DEFF00]/25 text-white px-1">falava muito rápido</span>, comia as palavras e sempre me incomodou quando as pessoas pediam para eu repetir, falar novamente.
@@ -30,6 +35,7 @@ export function TestimonialsSection() {
                     name="Carlos Souza"
                     role="Telemarketing"
                     initials="CS"
+                    imageSrc={imgCarlos}
                     description={
                         <>
                             Hoje eu me sinto <span className="bg-[#DEFF00]/25 text-white px-1">uma pessoa mais autoconfiante</span>, <span className="bg-[#DEFF00]/25 text-white px-1">mais interessante</span> e que as pessoas buscam por conversar comigo.
@@ -42,6 +48,7 @@ export function TestimonialsSection() {
                     name="Sara Menezes"
                     role="Head de operações"
                     initials="SM"
+                    imageSrc={imgSara}
                     description={
                         <>
                             Então, realmente isso foi <span className="bg-[#DEFF00]/25 text-white px-1">uma transformação muito grande</span>, não apenas na minha carreira, mas também na <span className="bg-[#DEFF00]/25 text-white px-1">minha vida profissional</span>.
@@ -54,6 +61,7 @@ export function TestimonialsSection() {
                     name="Thiago Tuller"
                     role="Relações Públicas"
                     initials="TT"
+                    imageSrc={imgThiago}
                     description={
                         <>
                             E eu achava que eu <span className="bg-[#DEFF00]/25 text-white px-1">não tinha como mudar isso</span>. Até que um dia eu ouvi e <span className="bg-[#DEFF00]/25 text-white px-1">conheci o Giovanni por meio de um podcast</span>.
