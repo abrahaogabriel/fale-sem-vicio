@@ -24,7 +24,7 @@ const cards = [
 
 export function VicesImpact() {
     return (
-        <section className="relative w-full bg-[#1A1A1A] py-[80px] px-6 md:px-[120px] flex flex-col items-center overflow-hidden">
+        <section className="relative w-full bg-[#3D3D3D] py-[80px] px-6 md:px-[120px] flex flex-col items-center overflow-hidden">
             {/* Background Gradient Detail (Optional but premium) */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-brand-lime/20 to-transparent" />
 
@@ -60,18 +60,17 @@ export function VicesImpact() {
                         whileInView={{ opacity: 1, y: 0, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{
-                            duration: 0.7,
-                            delay: 0.4 + (i * 0.15),
+                            duration: 0.8,
+                            delay: 0.2 + (i * 0.1),
                             ease: [0.215, 0.61, 0.355, 1]
                         }}
                         whileHover={{
-                            scale: 1.02,
                             backgroundColor: "rgba(255, 255, 255, 0.12)",
                             borderColor: "rgba(222, 255, 0, 0.4)"
                         }}
                         className="w-full md:w-[391px] h-[168px] backdrop-blur-[13px] bg-white/10 border border-white/20 rounded-[20px] flex items-center justify-center gap-6 px-8 transition-colors duration-300"
                     >
-                        <div className="w-[42px] h-auto flex-shrink-0">
+                        <div className="w-[31px] h-auto flex-shrink-0">
                             <img src={card.icon} alt="icon" className="w-full h-full object-contain" />
                         </div>
                         <p className="text-[24px] md:text-[28px] text-white font-sora leading-none">
@@ -92,12 +91,6 @@ export function VicesImpact() {
             >
                 Falar sem vício vai transformar sua <span className="text-brand-lime font-bold">comunicação, confiança e autoridade.</span>
             </motion.p>
-
-            {/* Divisor at bottom */}
-            <div
-                className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[1500px] h-[1px]"
-                style={{ background: 'linear-gradient(90deg, rgba(0,0,0,0) 0%, #DEFF00 50%, rgba(0,0,0,0) 100%)' }}
-            />
         </section>
     );
 }
