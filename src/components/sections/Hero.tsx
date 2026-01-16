@@ -54,7 +54,7 @@ export function Hero() {
                 className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none select-none overflow-hidden pb-[15vh]"
             >
                 <TextType
-                    text={["ÉÉÉÉÉÉÉÉ!", "ENTÃÃOOOO...", "TIPO... TIPO...", "MAS... MAS..."]}
+                    text={["ÉÉÉÉÉÉÉÉ!", "ENTÃÃOOOO...", "TIPO... TIPO...", "MAS... MAS...", "ÉÉÉÉ... QUE", "ENTÃO..."]}
                     as="h2"
                     pauseDuration={2000}
                     deletingSpeed={45}
