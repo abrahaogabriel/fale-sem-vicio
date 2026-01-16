@@ -13,9 +13,10 @@ export function CircuitLine({ pathD, delay = 0 }: CircuitLineProps) {
                 <path
                     d={pathD}
                     stroke="#DEFF00"
-                    strokeOpacity="0.2"
-                    strokeWidth="1"
+                    strokeOpacity="0.3"
+                    strokeWidth="3"
                     fill="none"
+                    vectorEffect="non-scaling-stroke"
                 />
 
                 {/* Moving "Ball" */}

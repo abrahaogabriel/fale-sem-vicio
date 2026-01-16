@@ -17,7 +17,7 @@ import { CircuitLine } from "../ui/CircuitLine";
 
 export function LearningSection() {
     return (
-        <section className="relative w-full bg-black py-[120px] px-6 md:px-[120px] flex flex-col items-center overflow-hidden">
+        <section className="relative w-full bg-black py-20 px-6 md:px-[60px] lg:px-[120px] flex flex-col items-center overflow-hidden">
 
             {/* Header */}
             <div className="w-full flex flex-col items-center gap-4 mb-20 relative z-10">
@@ -33,25 +33,19 @@ export function LearningSection() {
             </div>
 
             {/* Main Content Area - Radial Layout */}
-            <div className="relative w-full max-w-[1600px] min-h-[800px] flex flex-col md:grid md:grid-cols-[1fr_auto_1fr] md:grid-rows-2 gap-y-16 md:gap-y-0 items-center justify-center">
+            <div className="relative w-full max-w-full md:max-w-[1440px] min-h-[500px] flex flex-col md:grid md:grid-cols-[1fr_auto_1fr] md:grid-rows-2 gap-y-16 md:gap-y-8 items-center justify-center">
 
                 {/* --- SVG LINES LAYER (Desktop Only) --- */}
-                {/* 
-                    Coordinate System (Approx for 1440x900 view):
-                    Center: 720, 450
-                    Left Pulse Target: ~540 x (250 & 650)
-                    Right Pulse Target: ~900 x (250 & 650)
-                */}
                 <div className="absolute inset-0 hidden md:block pointer-events-none z-0">
-                    <svg className="w-full h-full" viewBox="0 0 1440 900" preserveAspectRatio="none">
+                    <svg className="w-full h-full" viewBox="0 0 1000 1000" preserveAspectRatio="none">
                         {/* Top Left */}
-                        <CircuitLine pathD="M 720 450 L 540 450 L 540 250 H 480" delay={0} />
+                        <CircuitLine pathD="M 500 500 L 350 500 L 350 250 H 240" delay={0} />
                         {/* Bottom Left */}
-                        <CircuitLine pathD="M 720 450 L 540 450 L 540 650 H 480" delay={1} />
+                        <CircuitLine pathD="M 500 500 L 350 500 L 350 750 H 240" delay={1} />
                         {/* Top Right */}
-                        <CircuitLine pathD="M 720 450 L 900 450 L 900 250 H 960" delay={2} />
+                        <CircuitLine pathD="M 500 500 L 650 500 L 650 250 H 760" delay={2} />
                         {/* Bottom Right */}
-                        <CircuitLine pathD="M 720 450 L 900 450 L 900 650 H 960" delay={3} />
+                        <CircuitLine pathD="M 500 500 L 650 500 L 650 750 H 760" delay={3} />
                     </svg>
                 </div>
 
@@ -65,7 +59,7 @@ export function LearningSection() {
                             delay={0.2}
                         />
                         {/* Connection Pulse Endpoint */}
-                        <div className="hidden md:block absolute -right-[100px] top-1/2 -translate-y-1/2 translate-x-1/2">
+                        <div className="hidden md:block absolute -right-[43px] top-1/2 -translate-y-1/2 z-20">
                             <PulseNode />
                         </div>
                     </div>
@@ -77,7 +71,7 @@ export function LearningSection() {
                             description="Você corrige problemas de articulação que fazem sua fala soar confusa, imprecisa ou difícil de acompanhar, mesmo quando a ideia é simples."
                             delay={0.4}
                         />
-                        <div className="hidden md:block absolute -right-[100px] top-1/2 -translate-y-1/2 translate-x-1/2">
+                        <div className="hidden md:block absolute -right-[43px] top-1/2 -translate-y-1/2 z-20">
                             <PulseNode />
                         </div>
                     </div>
@@ -94,7 +88,7 @@ export function LearningSection() {
                 <div className="flex flex-col gap-16 md:gap-[200px] justify-center items-start h-full z-10 w-full pl-8">
                     {/* Top Right Card */}
                     <div className="relative flex items-center">
-                        <div className="hidden md:block absolute -left-[100px] top-1/2 -translate-y-1/2 -translate-x-1/2">
+                        <div className="hidden md:block absolute -left-[43px] top-1/2 -translate-y-1/2 z-20">
                             <PulseNode />
                         </div>
                         <LearningCard
@@ -106,7 +100,7 @@ export function LearningSection() {
 
                     {/* Bottom Right Card */}
                     <div className="relative flex items-center">
-                        <div className="hidden md:block absolute -left-[100px] top-1/2 -translate-y-1/2 -translate-x-1/2">
+                        <div className="hidden md:block absolute -left-[43px] top-1/2 -translate-y-1/2 z-20">
                             <PulseNode />
                         </div>
                         <LearningCard
