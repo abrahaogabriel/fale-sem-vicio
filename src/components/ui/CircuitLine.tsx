@@ -20,12 +20,12 @@ export function CircuitLine({ pathD, delay = 0 }: CircuitLineProps) {
 
             {/* Moving "Ball" */}
             <motion.circle
-                r="3"
+                r="5"
                 fill="#DEFF00"
                 filter="drop-shadow(0 0 4px #DEFF00)"
             >
                 <animateMotion
-                    dur="4s"
+                    dur="6s"
                     repeatCount="indefinite"
                     path={pathD}
                     begin={`${delay}s`}

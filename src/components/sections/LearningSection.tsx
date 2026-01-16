@@ -39,13 +39,13 @@ export function LearningSection() {
                 <div className="absolute inset-0 hidden md:block pointer-events-none z-0">
                     <svg className="w-full h-full" viewBox="0 0 1800 1000">
                         {/* Top Left */}
-                        <CircuitLine pathD="M 900 500 L 600 500 L 600 250 H 200" delay={0} />
+                        <CircuitLine pathD="M 900 500 L 600 500 L 600 250 H 130" delay={0} />
                         {/* Bottom Left */}
-                        <CircuitLine pathD="M 900 500 L 600 500 L 600 750 H 200" delay={1} />
+                        <CircuitLine pathD="M 900 500 L 600 500 L 600 750 H 130" delay={1} />
                         {/* Top Right */}
-                        <CircuitLine pathD="M 900 500 L 1200 500 L 1200 250 H 1600" delay={2} />
+                        <CircuitLine pathD="M 900 500 L 1200 500 L 1200 250 H 1670" delay={2} />
                         {/* Bottom Right */}
-                        <CircuitLine pathD="M 900 500 L 1200 500 L 1200 750 H 1600" delay={3} />
+                        <CircuitLine pathD="M 900 500 L 1200 500 L 1200 750 H 1670" delay={3} />
                     </svg>
                 </div>
 
