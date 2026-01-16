@@ -37,15 +37,15 @@ export function LearningSection() {
 
                 {/* --- SVG LINES LAYER (Desktop Only) --- */}
                 <div className="absolute inset-0 hidden md:block pointer-events-none z-0">
-                    <svg className="w-full h-full" viewBox="0 0 1000 1000" preserveAspectRatio="none">
+                    <svg className="w-full h-full" viewBox="0 0 1800 1000">
                         {/* Top Left */}
-                        <CircuitLine pathD="M 500 500 L 320 500 L 320 250 H 150" delay={0} />
+                        <CircuitLine pathD="M 900 500 L 600 500 L 600 250 H 200" delay={0} />
                         {/* Bottom Left */}
-                        <CircuitLine pathD="M 500 500 L 320 500 L 320 750 H 150" delay={1} />
+                        <CircuitLine pathD="M 900 500 L 600 500 L 600 750 H 200" delay={1} />
                         {/* Top Right */}
-                        <CircuitLine pathD="M 500 500 L 680 500 L 680 250 H 850" delay={2} />
+                        <CircuitLine pathD="M 900 500 L 1200 500 L 1200 250 H 1600" delay={2} />
                         {/* Bottom Right */}
-                        <CircuitLine pathD="M 500 500 L 680 500 L 680 750 H 850" delay={3} />
+                        <CircuitLine pathD="M 900 500 L 1200 500 L 1200 750 H 1600" delay={3} />
                     </svg>
                 </div>
 
@@ -53,11 +53,13 @@ export function LearningSection() {
                 <div className="flex flex-col gap-16 md:gap-[150px] justify-center items-end h-full w-full pr-8">
                     {/* Top Left Card */}
                     <div className="relative flex items-center z-20">
-                        <LearningCard
-                            title="Vícios de linguagem"
-                            description="Você identifica e elimina os vícios que entram no meio da sua fala, quebram o raciocínio e enfraquecem sua autoridade, mesmo quando você domina o assunto."
-                            delay={0.2}
-                        />
+                        <div className="relative z-30 w-full">
+                            <LearningCard
+                                title="Vícios de linguagem"
+                                description="Você identifica e elimina os vícios que entram no meio da sua fala, quebram o raciocínio e enfraquecem sua autoridade, mesmo quando você domina o assunto."
+                                delay={0.2}
+                            />
+                        </div>
                         {/* Connection Pulse Endpoint */}
                         <div className="hidden md:block absolute -right-[43px] top-1/2 -translate-y-1/2 z-10 scale-75 lg:scale-100">
                             <PulseNode />
@@ -66,11 +68,13 @@ export function LearningSection() {
 
                     {/* Bottom Left Card */}
                     <div className="relative flex items-center z-20">
-                        <LearningCard
-                            title="Dicção"
-                            description="Você corrige problemas de articulação que fazem sua fala soar confusa, imprecisa ou difícil de acompanhar, mesmo quando a ideia é simples."
-                            delay={0.4}
-                        />
+                        <div className="relative z-30 w-full">
+                            <LearningCard
+                                title="Dicção"
+                                description="Você corrige problemas de articulação que fazem sua fala soar confusa, imprecisa ou difícil de acompanhar, mesmo quando a ideia é simples."
+                                delay={0.4}
+                            />
+                        </div>
                         <div className="hidden md:block absolute -right-[43px] top-1/2 -translate-y-1/2 z-10 scale-75 lg:scale-100">
                             <PulseNode />
                         </div>
@@ -91,11 +95,13 @@ export function LearningSection() {
                         <div className="hidden md:block absolute -left-[43px] top-1/2 -translate-y-1/2 z-10 scale-75 lg:scale-100">
                             <PulseNode />
                         </div>
-                        <LearningCard
-                            title="Prolixidade"
-                            description="Você aprende a organizar suas ideias para falar com clareza e objetividade, sem dar voltas desnecessárias que confundem a audiência."
-                            delay={0.6}
-                        />
+                        <div className="relative z-30 w-full">
+                            <LearningCard
+                                title="Prolixidade"
+                                description="Você aprende a organizar suas ideias para falar com clareza e objetividade, sem dar voltas desnecessárias que confundem a audiência."
+                                delay={0.6}
+                            />
+                        </div>
                     </div>
 
                     {/* Bottom Right Card */}
@@ -103,20 +109,17 @@ export function LearningSection() {
                         <div className="hidden md:block absolute -left-[43px] top-1/2 -translate-y-1/2 z-10 scale-75 lg:scale-100">
                             <PulseNode />
                         </div>
-                        <LearningCard
-                            title="Vocabulário"
-                            description="Você ajusta o uso das palavras, evitando jargões, estrangeirismos e termos desnecessários que atrapalham a clareza e afastam quem te escuta."
-                            delay={0.8}
-                        />
+                        <div className="relative z-30 w-full">
+                            <LearningCard
+                                title="Vocabulário"
+                                description="Você ajusta o uso das palavras, evitando jargões, estrangeirismos e termos desnecessários que atrapalham a clareza e afastam quem te escuta."
+                                delay={0.8}
+                            />
+                        </div>
                     </div>
                 </div>
 
             </div>
-            {/* Divisor at bottom */}
-            <div
-                className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[1500px] h-[1px]"
-                style={{ background: 'linear-gradient(90deg, rgba(0,0,0,0) 0%, #DEFF00 50%, rgba(0,0,0,0) 100%)' }}
-            />
         </section>
     );
 }
