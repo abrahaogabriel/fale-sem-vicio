@@ -5,7 +5,7 @@ import imgCheckYellow from "../../assets/check_yellow.svg";
 
 // SVG for the Price Box Logo
 const PriceLogo = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="280" height="110" viewBox="0 0 280 110" fill="none" className="w-full max-w-[200px] sm:max-w-[280px] h-auto text-[#DEFF00]">
+    <svg xmlns="http://www.w3.org/2000/svg" width="280" height="110" viewBox="0 0 280 110" fill="none" className="w-[200px] sm:w-[280px] h-auto text-[#DEFF00]">
         <path d="M120.236 100.912C120.595 100.912 120.845 101.132 120.845 101.489V101.903C120.845 103.001 121.342 103.527 122.537 103.527H130.929C132.924 103.527 133.311 103.142 133.311 101.517V100.114C133.311 98.4894 132.924 98.0764 130.929 98.0764H122.121C119.102 98.0764 117.717 96.7288 117.717 93.8652V91.3344C117.717 88.4708 119.102 87.1233 122.121 87.1233H131.926C135.196 87.1233 136.415 88.3064 136.415 91.4147V91.9922C136.415 92.3491 136.222 92.5697 135.806 92.5697H133.646C133.259 92.5697 133.037 92.3491 133.037 91.9922V91.6072C133.037 90.5083 132.536 89.9829 131.321 89.9829H123.566C121.6 89.9829 121.185 90.396 121.185 91.9922V93.1753C121.185 94.7997 121.6 95.2127 123.566 95.2127H132.375C135.394 95.2127 136.807 96.5603 136.807 99.4239V102.175C136.807 105.039 135.394 106.386 132.375 106.386H121.96C118.69 106.386 117.446 105.231 117.446 102.095V101.489C117.446 101.132 117.668 100.912 118.056 100.912H120.244H120.236Z" fill="currentColor" />
         <path d="M158.182 87.1273C158.541 87.1273 158.763 87.3198 158.763 87.7048V89.4093C158.763 89.7663 158.541 89.9869 158.182 89.9869H143.972V95.2168H155.994C156.353 95.2168 156.603 95.4093 156.603 95.7943V97.5269C156.603 97.8838 156.353 98.0764 155.994 98.0764H143.972V103.527H158.182C158.541 103.527 158.763 103.747 158.763 104.104V105.809C158.763 106.194 158.541 106.386 158.182 106.386H141.09C140.702 106.386 140.509 106.194 140.509 105.809V87.7008C140.509 87.3158 140.702 87.1233 141.09 87.1233H158.182V87.1273Z" fill="currentColor" />
         <path d="M167.487 87.1273C167.959 87.1273 168.177 87.2917 168.318 87.6487L174.854 103.198L181.418 87.6487C181.555 87.2917 181.777 87.1273 182.249 87.1273H186.653C187.041 87.1273 187.235 87.3198 187.235 87.7048V105.813C187.235 106.198 187.041 106.39 186.653 106.39H184.38C183.993 106.39 183.771 106.198 183.771 105.813V89.9869L176.957 105.865C176.82 106.222 176.598 106.386 176.125 106.386H173.465C172.964 106.386 172.771 106.222 172.633 105.865L165.791 89.9588V105.809C165.791 106.194 165.569 106.386 165.182 106.386H163.103C162.715 106.386 162.521 106.194 162.521 105.809V87.7008C162.521 87.3158 162.715 87.1233 163.103 87.1233H167.478L167.487 87.1273Z" fill="currentColor" />
@@ -37,8 +37,9 @@ export function PriceSection() {
         <section className="relative w-full bg-black py-20 px-6 xl:px-[120px] flex flex-col items-center justify-center overflow-hidden">
             {/* Title */}
             <div className="w-full max-w-[1240px] text-center mb-[80px]">
-                <h2 className="text-[28px] md:text-[32px] font-sora font-medium text-white text-center leading-[1.2]">
-                    Uma metodologia completa para você conquistar <span className="text-[#DEFF00]">espaço e respeito</span>
+                {/* User feedback: H1 text has lighter weight, only span is highlighted/bold */}
+                <h2 className="text-[28px] md:text-[32px] font-sora font-normal text-white text-center leading-[1.2]">
+                    Uma metodologia completa para você conquistar <span className="text-[#DEFF00] font-bold">espaço e respeito</span>
                 </h2>
             </div>
 
@@ -46,48 +47,56 @@ export function PriceSection() {
             <div className="flex flex-col xl:flex-row items-center justify-center gap-10 xl:gap-[60px] w-full max-w-[1400px]">
 
                 {/* Left Column: Giovanni Testimonial */}
-                <div className="flex flex-col items-end gap-[30px] flex-1 max-w-[400px] xl:max-w-none w-full xl:w-auto text-right">
+                {/* User feedback: margins and widths wrong, text should fit in 3 lines. */}
+                {/* Removed max-w limitation to let it flow naturally, or increased slightly if needed. */}
+                <div className="flex flex-col items-end gap-[20px] xl:gap-[30px] flex-1 w-full xl:w-auto text-right min-w-[300px]">
                     {/* Header: Name + Avatar */}
                     <div className="flex items-center gap-[12px] justify-end w-full">
                         <div className="flex flex-col items-end gap-[2px]">
-                            <p className="text-white font-sora text-[16.7px] leading-tight">Giovanni Begossi</p>
+                            {/* Name: Regular */}
+                            <p className="text-white font-sora font-normal text-[16.7px] leading-tight">Giovanni Begossi</p>
+                            {/* Role: Light */}
                             <p className="text-[#808080] font-sora font-light text-[15px] leading-tight">O El Professor da Oratória</p>
                         </div>
-                        <div className="w-[59px] h-[59px] rounded-full overflow-hidden shrink-0 border border-white/10">
+                        <div className="w-[59px] h-[59px] rounded-full overflow-hidden shrink-0 border border-white/10 relative">
+                            {/* Masked image approach from Figma context */}
                             <img src={imgGiovanni} alt="Giovanni" className="w-full h-full object-cover scale-[1.5] translate-y-1" />
                         </div>
                     </div>
                     {/* Quote */}
-                    <p className="text-white font-quicksand font-medium text-[20px] leading-tight w-full">
+                    {/* User feedback: fits in 3 lines. Quicksand Medium 20px. */}
+                    <p className="text-white font-quicksand font-medium text-[20px] leading-tight w-full xl:max-w-[450px]">
                         “Eu criei o Fale sem Vício para corrigir um problema comum, silencioso e ignorado, que faz pessoas excepcionais não serem levadas a sério”
                     </p>
                 </div>
 
                 {/* Center Column: Price Box */}
-                <div className="relative shrink-0">
-                    <div className="w-full xl:w-[470px] bg-black bg-opacity-40 border border-[#DEFF00] rounded-[45px] px-[30px] py-[40px] md:px-[60px] md:py-[50px] flex flex-col items-center relative gap-[30px] lg:gap-[50px]"
+                {/* User feedback: box width too small, text breaking. Increased min-width and padding. */}
+                <div className="relative shrink-0 w-full md:w-auto">
+                    <div className="w-full md:min-w-[540px] bg-black bg-opacity-40 border border-[#DEFF00] rounded-[45px] px-[40px] py-[40px] md:px-[60px] md:py-[40px] flex flex-col items-center relative gap-[30px]"
                         style={{ background: 'rgba(222, 255, 0, 0.08)' }}
                     >
                         {/* Logo */}
                         <PriceLogo />
 
                         {/* Price Info */}
-                        <div className="flex flex-col items-center gap-2">
-                            <span className="text-[#808080] font-sora text-[20px] lg:text-[24px] opacity-60">Por apenas 12x de</span>
-                            <div className="text-[#DEFF00] font-helvetica font-bold text-[80px] lg:text-[96px] leading-[0.9] tracking-tighter">
+                        <div className="flex flex-col items-center gap-0">
+                            <span className="text-[#808080] font-sora text-[20px] opacity-60">Por apenas 12x de</span>
+                            {/* Huge Price Font */}
+                            <div className="text-[#DEFF00] font-helvetica font-bold text-[80px] lg:text-[110px] leading-[0.9] tracking-tighter -my-2">
                                 R$ 10,18
                             </div>
                             <span className="text-[#808080] font-sora text-[20px] opacity-60">Ou apenas R$97,00 à vista</span>
                         </div>
 
                         {/* CTA Button */}
-                        <button className="w-full bg-[#DEFF00] hover:bg-[#cbe600] text-[#1E1E1E] font-sora font-medium text-[16px] lg:text-[20px] py-4 rounded-xl transition-colors flex items-center justify-center gap-2 group mt-2">
+                        <button className="w-full bg-[#DEFF00] hover:bg-[#cbe600] text-[#1E1E1E] font-sora font-medium text-[18px] py-4 rounded-xl transition-colors flex items-center justify-center gap-2 group mt-4">
                             QUERO FALAR SEM VÍCIO
                             <ArrowRight className="group-hover:translate-x-1 transition-transform w-5 h-5" />
                         </button>
 
                         {/* Security Footer */}
-                        <div className="flex flex-col items-center gap-4 w-full pt-4">
+                        <div className="flex flex-col items-center gap-4 w-full pt-2">
                             <div className="flex items-center gap-6 text-[#9CA3AF] text-sm">
                                 <div className="flex items-center gap-2">
                                     <Lock size={16} className="text-[#DEFF00]" />
@@ -105,7 +114,8 @@ export function PriceSection() {
                 </div>
 
                 {/* Right Column: Bullets */}
-                <div className="flex flex-col gap-[14px] flex-1 max-w-[400px] xl:max-w-none w-full xl:w-auto items-start">
+                {/* User feedback: font weights wrong. Should be Medium (500). */}
+                <div className="flex flex-col gap-[20px] flex-1 w-full xl:w-auto items-start min-w-[300px]">
                     {[
                         "Metodologia validada",
                         "6 Módulos com +25 Aulas",
@@ -113,8 +123,9 @@ export function PriceSection() {
                         "Conteúdo único e exclusivo"
                     ].map((item, index) => (
                         <div key={index} className="flex items-center gap-[16px]">
-                            <img src={imgCheckYellow} alt="Check" className="w-[20px] h-[20px]" />
-                            <p className="text-[#CCCCCC] font-sora font-medium text-[20px]">{item}</p>
+                            <img src={imgCheckYellow} alt="Check" className="w-[20px] h-[20px] shrink-0" />
+                            {/* Font Sora Medium 20px #CCC */}
+                            <p className="text-[#CCCCCC] font-sora font-medium text-[20px] leading-tight">{item}</p>
                         </div>
                     ))}
                 </div>
