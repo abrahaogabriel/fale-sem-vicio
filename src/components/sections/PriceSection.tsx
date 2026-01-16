@@ -1,4 +1,5 @@
 import { ArrowRight, Lock, ShieldCheck } from "lucide-react";
+import { motion } from "framer-motion";
 import imgGiovanni from "../../assets/giovannisrc.png";
 import imgLogosCartao from "../../assets/logos_cartao.svg";
 import imgCheckYellow from "../../assets/check_yellow.svg";
@@ -36,20 +37,31 @@ export function PriceSection() {
     return (
         <section className="relative w-full bg-black py-20 px-6 xl:px-[120px] flex flex-col items-center justify-center overflow-hidden">
             {/* Title */}
-            <div className="w-full max-w-[1240px] text-center mb-[80px]">
-                {/* User feedback: H1 text has lighter weight, only span is highlighted/bold */}
+            <motion.div
+                className="w-full max-w-[1240px] text-center mb-[80px]"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+            >
                 <h2 className="text-[28px] md:text-[32px] font-sora font-normal text-white text-center leading-[1.2]">
                     Uma metodologia completa para você conquistar <span className="text-[#DEFF00] font-bold">espaço e respeito</span>
                 </h2>
-            </div>
+            </motion.div>
 
             {/* Content Grid: Left (Giovanni), Center (Price), Right (Bullets) */}
-            <div className="flex flex-col xl:flex-row items-center justify-center gap-10 xl:gap-[60px] w-full max-w-[1400px]">
+            <div className="flex flex-col xl:flex-row items-center justify-center gap-10 xl:gap-[60px] w-full max-w-[1900px]">
 
                 {/* Left Column: Giovanni Testimonial */}
                 {/* User feedback: margins and widths wrong, text should fit in 3 lines. */}
                 {/* Removed max-w limitation to let it flow naturally, or increased slightly if needed. */}
-                <div className="flex flex-col items-end gap-[20px] xl:gap-[30px] flex-1 w-full xl:w-auto text-right min-w-[300px]">
+                <motion.div
+                    className="flex flex-col items-end gap-[20px] xl:gap-[30px] flex-1 w-full xl:w-auto text-right min-w-[300px]"
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
+                >
                     {/* Header: Name + Avatar */}
                     <div className="flex items-center gap-[12px] justify-end w-full">
                         <div className="flex flex-col items-end gap-[2px]">
@@ -65,22 +77,27 @@ export function PriceSection() {
                     </div>
                     {/* Quote */}
                     {/* User feedback: fits in 3 lines. Quicksand Medium 20px. */}
-                    <p className="text-white font-quicksand font-medium text-[20px] leading-tight w-full xl:max-w-[450px]">
+                    <p className="text-white font-quicksand font-normal text-[18px] leading-tight w-full xl:max-w-[700px]">
                         “Eu criei o Fale sem Vício para corrigir um problema comum, silencioso e ignorado, que faz pessoas excepcionais não serem levadas a sério”
                     </p>
-                </div>
+                </motion.div>
 
                 {/* Center Column: Price Box */}
-                {/* User feedback: box width too small, text breaking. Increased min-width and padding. */}
-                <div className="relative shrink-0 w-full md:w-auto">
-                    <div className="w-full md:min-w-[540px] bg-black bg-opacity-40 border border-[#DEFF00] rounded-[45px] px-[40px] py-[40px] md:px-[60px] md:py-[40px] flex flex-col items-center relative gap-[30px]"
+                <motion.div
+                    className="relative shrink-0 w-full md:w-auto"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+                >
+                    <div className="w-full md:min-w-[600px] bg-black bg-opacity-40 border border-[#DEFF00] rounded-[45px] px-[40px] py-[40px] md:px-[60px] md:py-[40px] flex flex-col items-center relative gap-[40px]"
                         style={{ background: 'rgba(222, 255, 0, 0.08)' }}
                     >
                         {/* Logo */}
                         <PriceLogo />
 
                         {/* Price Info */}
-                        <div className="flex flex-col items-center gap-0">
+                        <div className="flex flex-col items-center gap-8">
                             <span className="text-[#808080] font-sora text-[20px] opacity-60">Por apenas 12x de</span>
                             {/* Huge Price Font */}
                             <div className="text-[#DEFF00] font-helvetica font-bold text-[80px] lg:text-[110px] leading-[0.9] tracking-tighter -my-2">
@@ -99,36 +116,49 @@ export function PriceSection() {
                         <div className="flex flex-col items-center gap-4 w-full pt-2">
                             <div className="flex items-center gap-6 text-[#9CA3AF] text-sm">
                                 <div className="flex items-center gap-2">
-                                    <Lock size={16} className="text-[#DEFF00]" />
-                                    <span className="text-[#808080] font-sora text-[14px]">Compra 100% segura</span>
+                                    <Lock size={20} className="text-[#DEFF00]" />
+                                    <span className="text-[#808080] font-sora text-[20px]">Compra 100% segura</span>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <ShieldCheck size={16} className="text-[#DEFF00]" />
-                                    <span className="text-[#808080] font-sora text-[14px]">Garantia de 7 dias</span>
+                                    <ShieldCheck size={20} className="text-[#DEFF00]" />
+                                    <span className="text-[#808080] font-sora text-[20px]">Garantia de 7 dias</span>
                                 </div>
                             </div>
                             {/* Card Logos */}
                             <img src={imgLogosCartao} alt="Formas de Pagamento" className="h-[24px] opacity-60 grayscale hover:grayscale-0 transition-all" />
                         </div>
                     </div>
-                </div>
+                </motion.div>
 
                 {/* Right Column: Bullets */}
                 {/* User feedback: font weights wrong. Should be Medium (500). */}
-                <div className="flex flex-col gap-[20px] flex-1 w-full xl:w-auto items-start min-w-[300px]">
+                <motion.div
+                    className="flex flex-col gap-[20px] flex-1 w-full xl:w-auto items-start min-w-[300px]"
+                    initial={{ opacity: 0, x: 50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.7, ease: "easeOut", delay: 0.3 }}
+                >
                     {[
                         "Metodologia validada",
                         "6 Módulos com +25 Aulas",
                         "Resultados à partir do 1º dia",
                         "Conteúdo único e exclusivo"
                     ].map((item, index) => (
-                        <div key={index} className="flex items-center gap-[16px]">
+                        <motion.div
+                            key={index}
+                            className="flex items-center gap-[16px]"
+                            initial={{ opacity: 0, y: 10 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
+                        >
                             <img src={imgCheckYellow} alt="Check" className="w-[20px] h-[20px] shrink-0" />
                             {/* Font Sora Medium 20px #CCC */}
-                            <p className="text-[#CCCCCC] font-sora font-medium text-[20px] leading-tight">{item}</p>
-                        </div>
+                            <p className="text-[#CCCCCC] font-sora font-normal text-[20px] leading-tight">{item}</p>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
 
             </div>
         </section>
