@@ -39,13 +39,13 @@ export function LearningSection() {
                 <div className="absolute inset-0 hidden md:block pointer-events-none z-0">
                     <svg className="w-full h-full" viewBox="0 0 1800 1000">
                         {/* Top Left */}
-                        <CircuitLine pathD="M 900 500 L 600 500 L 600 200 H 130" delay={0} />
+                        <CircuitLine pathD="M 900 500 L 600 500 L 600 200 H 130" delay={0} duration={5} />
                         {/* Bottom Left */}
-                        <CircuitLine pathD="M 900 500 L 600 500 L 600 830 H 130" delay={1} />
+                        <CircuitLine pathD="M 900 500 L 600 500 L 600 830 H 130" delay={1} duration={5} />
                         {/* Top Right */}
-                        <CircuitLine pathD="M 900 500 L 1200 500 L 1200 200 H 1670" delay={2} />
+                        <CircuitLine pathD="M 900 500 L 1200 500 L 1200 200 H 1670" delay={2} duration={5} />
                         {/* Bottom Right */}
-                        <CircuitLine pathD="M 900 500 L 1200 500 L 1200 810 H 1670" delay={3} />
+                        <CircuitLine pathD="M 900 500 L 1200 500 L 1200 810 H 1670" delay={3} duration={5} />
                     </svg>
                 </div>
 
@@ -62,7 +62,7 @@ export function LearningSection() {
                         </div>
                         {/* Connection Pulse Endpoint */}
                         <div className="hidden md:block absolute -right-[43px] top-1/2 -translate-y-1/2 z-10 scale-75 lg:scale-100">
-                            <PulseNode />
+                            <PulseNode delay={0} duration={5} />
                         </div>
                     </div>
 
@@ -76,7 +76,7 @@ export function LearningSection() {
                             />
                         </div>
                         <div className="hidden md:block absolute -right-[43px] top-1/2 -translate-y-1/2 z-10 scale-75 lg:scale-100">
-                            <PulseNode />
+                            <PulseNode delay={1} duration={5} />
                         </div>
                     </div>
                 </div>
@@ -93,7 +93,7 @@ export function LearningSection() {
                     {/* Top Right Card */}
                     <div className="relative flex items-center z-20">
                         <div className="hidden md:block absolute -left-[43px] top-1/2 -translate-y-1/2 z-10 scale-75 lg:scale-100">
-                            <PulseNode />
+                            <PulseNode delay={2} duration={5} />
                         </div>
                         <div className="relative z-30 w-full">
                             <LearningCard
@@ -107,7 +107,7 @@ export function LearningSection() {
                     {/* Bottom Right Card */}
                     <div className="relative flex items-center z-20">
                         <div className="hidden md:block absolute -left-[43px] top-1/2 -translate-y-1/2 z-10 scale-75 lg:scale-100">
-                            <PulseNode />
+                            <PulseNode delay={3} duration={5} />
                         </div>
                         <div className="relative z-30 w-full">
                             <LearningCard
