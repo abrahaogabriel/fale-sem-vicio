@@ -2,24 +2,25 @@ import { TestimonialCard } from "../ui/TestimonialCard";
 
 export function TestimonialsSection() {
     return (
-        <section className="relative w-full bg-black py-20 px-6 md:px-[60px] lg:px-[120px] flex flex-col items-center justify-center overflow-hidden">
+        <section className="relative w-full bg-black py-20 px-6 flex flex-col items-center justify-center overflow-hidden">
             {/* Title */}
-            <div className="w-full max-w-[900px] mb-16 text-center">
+            <div className="w-full max-w-[900px] mb-[60px] text-center relative z-10">
                 <h2 className="text-[32px] md:text-[40px] leading-[1.2] font-helvetica font-bold text-center">
-                    <span className="text-white font-normal block md:inline">Depoimentos de quem fez o curso e agora fala </span>
+                    <span className="text-white font-normal block md:inline">Depoimentos de quem fez o curso agora fala </span>
                     <span className="text-[#DEFF00]">Sem Vícios de linguagem</span>
                 </h2>
             </div>
 
             {/* Cards Grid */}
-            <div className="w-full max-w-[1400px] flex flex-col md:flex-row items-stretch justify-center gap-5 md:gap-8">
+            <div className="w-full max-w-[1800px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 md:gap-[20px] justify-items-center">
                 {/* Card 1 */}
                 <TestimonialCard
                     name="Allan Ferreira"
+                    role="Professor"
                     initials="AF"
                     description={
                         <>
-                            O meu objetivo principal nesse curso foi <span className="bg-[#DEFF00]/25 px-1 rounded-sm text-white">simplesmente melhorar minha dicção</span>, porque eu sempre <span className="bg-[#DEFF00]/25 px-1 rounded-sm text-white">falava muito rápido</span>, comia as palavras e sempre me incomodou quando as pessoas pediam para eu repetir, falar novamente.
+                            O meu objetivo principal nesse curso foi <span className="bg-[#DEFF00]/25 text-white px-1">simplesmente melhorar minha dicção</span>, porque eu sempre <span className="bg-[#DEFF00]/25 text-white px-1">falava muito rápido</span>, comia as palavras e sempre me incomodou quando as pessoas pediam para eu repetir, falar novamente.
                         </>
                     }
                 />
@@ -27,10 +28,11 @@ export function TestimonialsSection() {
                 {/* Card 2 */}
                 <TestimonialCard
                     name="Carlos Souza"
+                    role="Telemarketing"
                     initials="CS"
                     description={
                         <>
-                            Hoje eu me sinto <span className="bg-[#DEFF00]/25 px-1 rounded-sm text-white">uma pessoa mais autoconfiante</span>, <span className="bg-[#DEFF00]/25 px-1 rounded-sm text-white">mais interessante</span> e que as pessoas buscam por conversar comigo.
+                            Hoje eu me sinto <span className="bg-[#DEFF00]/25 text-white px-1">uma pessoa mais autoconfiante</span>, <span className="bg-[#DEFF00]/25 text-white px-1">mais interessante</span> e que as pessoas buscam por conversar comigo.
                         </>
                     }
                 />
@@ -38,10 +40,23 @@ export function TestimonialsSection() {
                 {/* Card 3 */}
                 <TestimonialCard
                     name="Sara Menezes"
+                    role="Head de operações"
                     initials="SM"
                     description={
                         <>
-                            Então, realmente isso foi <span className="bg-[#DEFF00]/25 px-1 rounded-sm text-white">uma transformação muito grande</span>, não apenas na minha carreira, mas também na <span className="bg-[#DEFF00]/25 px-1 rounded-sm text-white">minha vida profissional</span>.
+                            Então, realmente isso foi <span className="bg-[#DEFF00]/25 text-white px-1">uma transformação muito grande</span>, não apenas na minha carreira, mas também na <span className="bg-[#DEFF00]/25 text-white px-1">minha vida profissional</span>.
+                        </>
+                    }
+                />
+
+                {/* Card 4 */}
+                <TestimonialCard
+                    name="Thiago Tuller"
+                    role="Relações Públicas"
+                    initials="TT"
+                    description={
+                        <>
+                            E eu achava que eu <span className="bg-[#DEFF00]/25 text-white px-1">não tinha como mudar isso</span>. Até que um dia eu ouvi e <span className="bg-[#DEFF00]/25 text-white px-1">conheci o Giovanni por meio de um podcast</span>.
                         </>
                     }
                 />

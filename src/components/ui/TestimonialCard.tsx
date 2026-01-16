@@ -1,40 +1,50 @@
-import { Star } from "lucide-react";
+import { Quote } from "lucide-react";
 
 interface TestimonialCardProps {
     name: string;
+    role: string;
     description: React.ReactNode;
     initials: string;
 }
 
-export function TestimonialCard({ name, description, initials }: TestimonialCardProps) {
+export function TestimonialCard({ name, role, description, initials }: TestimonialCardProps) {
     return (
-        <div className="flex flex-col gap-6 p-6 md:p-8 bg-[#151515] border border-white/5 rounded-[24px] w-full max-w-[430px]">
-            {/* Header: Avatar + Stars */}
-            <div className="flex items-center gap-4">
+        <div className="flex flex-col gap-[17px] w-full max-w-[430px]">
+            {/* Header: Avatar + Info */}
+            <div className="flex items-center gap-[11px]">
                 {/* Avatar Placeholder */}
-                <div className="w-[58px] h-[58px] rounded-full bg-neutral-800 flex items-center justify-center border border-white/10 shadow-inner">
-                    <span className="text-white/60 font-sora font-semibold text-xl">{initials}</span>
+                <div className="w-[58px] h-[58px] rounded-full bg-neutral-800 flex items-center justify-center border border-white/5 shrink-0 overflow-hidden">
+                    {/* Ideally this would be the photo, using initials as fallback */}
+                    <span className="text-white/40 font-sora font-semibold text-lg">{initials}</span>
                 </div>
 
                 {/* Info */}
-                <div className="flex flex-col gap-1">
-                    <h3 className="text-white text-[16px] md:text-[18px] font-sora font-normal leading-tight">
+                <div className="flex flex-col gap-[1px]">
+                    <h3 className="text-white text-[16.7px] font-sora font-normal leading-tight">
                         {name}
                     </h3>
-                    {/* Stars */}
-                    <div className="flex gap-1">
-                        {[1, 2, 3, 4, 5].map((i) => (
-                            <Star key={i} size={14} className="fill-[#DEFF00] text-[#DEFF00]" />
-                        ))}
-                    </div>
+                    <p className="text-[#808080] text-[15px] font-sora font-light leading-tight">
+                        {role}
+                    </p>
                 </div>
             </div>
 
-            {/* Quote */}
-            <div className="relative">
-                <p className="text-white/80 font-sora font-light text-[15px] leading-[1.6]">
-                    {description}
-                </p>
+            {/* Card Body */}
+            <div className="relative border border-[#262626] rounded-[16.7px] p-[33px] bg-gradient-to-b from-[#1a1a1a] to-transparent flex flex-col items-start gap-6">
+                {/* Quote Icon */}
+                <div className="rotate-180 text-white/20">
+                    <Quote size={40} fill="currentColor" strokeWidth={0} />
+                </div>
+
+                {/* Quote Text */}
+                <div className="relative z-10">
+                    <p className="text-white font-sora font-normal text-[15px] leading-[1.5]">
+                        {description}
+                    </p>
+                </div>
+
+                {/* Texture/Noise overlay approximation */}
+                <div className="absolute inset-0 bg-white/5 pointer-events-none mix-blend-overlay opacity-20 rounded-[16.7px]" />
             </div>
         </div>
     );
