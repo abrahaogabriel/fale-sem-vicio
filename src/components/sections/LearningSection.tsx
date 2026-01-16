@@ -57,7 +57,6 @@ export function LearningSection() {
                             <LearningCard
                                 title="Vícios de linguagem"
                                 description="Você identifica e elimina os vícios que entram no meio da sua fala, quebram o raciocínio e enfraquecem sua autoridade, mesmo quando você domina o assunto."
-                                delay={0.2}
                             />
                         </div>
                         {/* Connection Pulse Endpoint */}
@@ -72,7 +71,6 @@ export function LearningSection() {
                             <LearningCard
                                 title="Dicção"
                                 description="Você corrige problemas de articulação que fazem sua fala soar confusa, imprecisa ou difícil de acompanhar, mesmo quando a ideia é simples."
-                                delay={0.4}
                             />
                         </div>
                         <div className="hidden md:block absolute -right-[43px] top-1/2 -translate-y-1/2 z-10 scale-75 lg:scale-100">
@@ -99,7 +97,6 @@ export function LearningSection() {
                             <LearningCard
                                 title="Prolixidade"
                                 description="Você aprende a organizar suas ideias para falar com clareza e objetividade, sem dar voltas desnecessárias que confundem a audiência."
-                                delay={0.6}
                             />
                         </div>
                     </div>
@@ -113,7 +110,6 @@ export function LearningSection() {
                             <LearningCard
                                 title="Vocabulário"
                                 description="Você ajusta o uso das palavras, evitando jargões, estrangeirismos e termos desnecessários que atrapalham a clareza e afastam quem te escuta."
-                                delay={0.8}
                             />
                         </div>
                     </div>
