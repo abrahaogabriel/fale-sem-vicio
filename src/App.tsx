@@ -4,6 +4,7 @@ import { ProblemContext } from "./components/sections/ProblemContext";
 import { VicesImpact } from "./components/sections/VicesImpact";
 import { LearningSection } from "./components/sections/LearningSection";
 import { TestimonialsSection } from './components/sections/TestimonialsSection'; // Dobra 07
+import { PriceSection } from './components/sections/PriceSection'; // Dobra 08
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <VicesImpact />
       <LearningSection />
       <TestimonialsSection />
+      <PriceSection />
     </main>
   );
 }
