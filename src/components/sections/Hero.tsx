@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import TextType from "../ui/TextType";
 import BlurText from "../ui/BlurText";
 
@@ -11,26 +11,54 @@ const imgLogoPng = "/logo-fale.png";
 const imgArrow = "/assets/arrow.svg";
 
 export function Hero() {
+    const { scrollY } = useScroll();
+
+    // Parallax Offsets: Values adjusted for more noticeable depth.
+    const yBg = useTransform(scrollY, [0, 800], [0, 300]);
+    const yTextType = useTransform(scrollY, [0, 800], [0, 180]);
+    const yGiovanni = useTransform(scrollY, [0, 800], [0, 100]);
+    const yForeground = useTransform(scrollY, [0, 800], [0, -50]); // Moving slightly up for more contrast
+
+    // Fade-to-Black and Opacity effects for background layers
+    const opacityTextType = useTransform(scrollY, [0, 500], [0.8, 0]);
+    const brightnessBg = useTransform(scrollY, [0, 500], ["brightness(1)", "brightness(0)"]);
+    const opacityBg = useTransform(scrollY, [0, 600], [1, 0]);
+
+    // Giovanni Fades slightly later and not fully, plus a subtle blur to smooth edges
+    const brightnessVal = useTransform(scrollY, [300, 900], [1, 0.3]);
+    const blurVal = useTransform(scrollY, [0, 600], [0, 10]);
+    const filterGiovanni = useTransform(
+        [brightnessVal, blurVal],
+        ([bright, blur]: any[]) => `brightness(${bright}) blur(${blur}px)`
+    );
+    const opacityGiovanni = useTransform(scrollY, [300, 900], [1, 0.6]);
+
     return (
         <section className="relative w-full h-screen bg-brand-dark overflow-hidden flex flex-col items-center">
 
             {/* --- LAYER 1: MAIN BACKGROUND PNG --- */}
-            <div className="absolute inset-0 z-0 pointer-events-none flex justify-center">
+            <motion.div
+                style={{ y: yBg, opacity: opacityBg, filter: brightnessBg }}
+                className="absolute inset-0 z-0 pointer-events-none flex justify-center"
+            >
                 <img
                     src={imgBgMain}
                     alt="Background"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover scale-110" // scale slightly to avoid white gaps on edges
                 />
-            </div>
+            </motion.div>
 
             {/* --- LAYER 2: LARGE BEBAS NEUE OUTLINE ANIMATED TEXT --- */}
-            <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none select-none overflow-hidden pb-[15vh]">
+            <motion.div
+                style={{ y: yTextType, opacity: opacityTextType }}
+                className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none select-none overflow-hidden pb-[15vh]"
+            >
                 <TextType
-                    text={["ÉÉÉÉÉÉ!", "ENTÃÃOOOO...", "FAZ SENTIDO?", "TIPO... TIPO...", "MAS... MAS..."]}
+                    text={["ÉÉÉÉÉÉÉÉ!", "ENTÃÃOOOO...", "TIPO... TIPO...", "MAS... MAS..."]}
                     as="h2"
                     pauseDuration={2000}
                     deletingSpeed={45}
-                    cursorBlinkDuration={0.4}
+                    cursorBlinkDuration={1}
                     showCursor={true}
                     cursorCharacter="|"
                     cursorClassName="font-sans text-white/50" // generic font to avoid Bebas Neue square
@@ -41,11 +69,13 @@ export function Hero() {
                         opacity: 0.8
                     }}
                 />
-            </div>
+            </motion.div>
 
             {/* --- LAYER 3: SPECIALIST & SMOKE EFFECTS --- */}
-            <div className="absolute inset-0 z-20 flex justify-center items-end pointer-events-none pb-[12vh]">
-
+            <motion.div
+                style={{ y: yGiovanni, opacity: opacityGiovanni, filter: filterGiovanni }}
+                className="absolute inset-0 z-20 flex justify-center items-end pointer-events-none pb-[12vh]"
+            >
                 {/* Giovanni (El Professor) - Sized to exactly 733px width from Figma */}
                 <div className="relative w-full max-w-[733px] px-4 flex justify-center items-end h-full">
 
@@ -67,7 +97,7 @@ export function Hero() {
                         className="w-full h-auto block relative z-10 max-h-[80vh] object-contain"
                     />
                 </div>
-            </div>
+            </motion.div>
 
             {/* --- LAYER 4: GLOBAL FRONT GRADIENT (Covers Giovanni & BG) --- */}
             <div
@@ -76,8 +106,11 @@ export function Hero() {
                 data-name="Degradê Frente"
             />
 
-            {/* --- LAYER 5: LOGO (Exactly 225px wide) --- */}
-            <div className="absolute top-[80px] left-[6vw] md:left-[120px] z-40 pointer-events-none">
+            {/* --- LAYER 5: LOGO --- */}
+            <motion.div
+                style={{ y: yForeground }}
+                className="absolute top-[80px] left-[6vw] md:left-[120px] z-40 pointer-events-none"
+            >
                 <div className="w-[225px]">
                     <img
                         src={imgLogoPng}
@@ -85,10 +118,13 @@ export function Hero() {
                         className="w-full h-auto block"
                     />
                 </div>
-            </div>
+            </motion.div>
 
-            {/* --- LAYER 6: MAIN HEADLINE & CTA (Ensure visibility in 100vh) --- */}
-            <div className="relative z-50 flex flex-col items-center text-center mt-auto pb-[6vh] px-6 w-full max-w-[1440px]">
+            {/* --- LAYER 6: MAIN HEADLINE & CTA --- */}
+            <motion.div
+                style={{ y: yForeground }}
+                className="relative z-50 flex flex-col items-center text-center mt-auto pb-[6vh] px-6 w-full max-w-[1440px]"
+            >
                 <div className="mb-8 w-full max-w-[1415px]">
                     <BlurText
                         text={[
@@ -118,7 +154,16 @@ export function Hero() {
                         </div>
                     </button>
                 </motion.div>
-            </div>
+            </motion.div>
+
+            {/* --- LAYER 7: DIVISOR --- */}
+            <motion.div
+                style={{
+                    y: yForeground,
+                    background: 'linear-gradient(90deg, rgba(0,0,0,0) 0%, #DEFF00 50%, rgba(0,0,0,0) 100%)'
+                }}
+                className="absolute bottom-0 left-1/2 -translate-x-1/2 z-50 w-full max-w-[1500px] h-[1px]"
+            />
 
         </section>
     );

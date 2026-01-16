@@ -18,21 +18,25 @@ interface CardProps {
 const Card = ({ bg, title, description, index }: CardProps) => (
     <motion.div
         initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 0.77, y: 0 }}
+        whileHover={{ opacity: 1, scale: 1.02 }}
         viewport={{ once: true }}
         transition={{ delay: index * 0.1, duration: 0.6 }}
-        className="relative w-[396px] h-[380px] rounded-[14px] overflow-hidden border border-white/10 group cursor-pointer"
+        className="relative w-[396px] h-[380px] rounded-[8px] overflow-hidden border border-[#4E4E4E] group cursor-pointer"
     >
         <img
             src={bg}
             alt={title}
             className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
         />
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+        {/* Gradient Overlay: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 42%, #000 100%) */}
+        <div
+            className="absolute inset-0"
+            style={{ background: 'linear-gradient(180deg, rgba(0, 0, 0, 0.00) 42%, #000 100%)' }}
+        />
 
         {/* Content */}
-        <div className="absolute bottom-8 left-0 right-0 px-6 text-center">
+        <div className="absolute bottom-8 left-0 right-0 px-6 text-center z-10">
             <p className="text-[18px] leading-[1.3] text-[#BCBCBC]">
                 <span className="font-bold text-brand-lime">{title}</span>, {description}
             </p>
@@ -50,18 +54,18 @@ export function ProblematicMoments() {
     ];
 
     return (
-        <section className="relative w-full bg-brand-dark py-[112px] px-6 md:px-[120px] flex flex-col items-center overflow-hidden">
+        <section className="relative w-full bg-brand-dark py-[80px] px-6 md:px-[120px] flex flex-col items-center overflow-hidden">
 
-            <div className="text-center mb-16 max-w-[1200px]">
+            <div className="w-full flex flex-col items-center text-center mb-16 max-w-[1200px]">
                 <BlurText
                     text={[
-                        { text: "Isso não acontece só quando", className: "font-medium text-white" },
+                        { text: "Isso não acontece só quando", className: "font-normal text-white" },
                         { text: "você está nervoso.", className: "font-bold text-brand-lime" }
                     ]}
                     delay={40}
                     animateBy="words"
                     direction="bottom"
-                    className="text-[32px] md:text-[40px] leading-[1.2] mb-4"
+                    className="text-[32px] md:text-[40px] leading-[1.2] mb-4 text-center justify-center"
                 />
 
                 <motion.p
@@ -69,7 +73,7 @@ export function ProblematicMoments() {
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.8, duration: 1 }}
-                    className="text-[#BCBCBC] text-lg md:text-[22px]"
+                    className="text-[#FFFFFF] text-lg md:text-[22px]"
                 >
                     Os vícios de linguagem aparecem justamente nos momentos em que sua fala deveria ser clara e direta:
                 </motion.p>
@@ -107,6 +111,12 @@ export function ProblematicMoments() {
                     </div>
                 </button>
             </motion.div>
+
+            {/* Divisor */}
+            <div
+                className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[1500px] h-[1px]"
+                style={{ background: 'linear-gradient(90deg, rgba(0,0,0,0) 0%, #DEFF00 50%, rgba(0,0,0,0) 100%)' }}
+            />
 
         </section>
     );
