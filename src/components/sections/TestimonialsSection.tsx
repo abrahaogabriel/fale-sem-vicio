@@ -25,7 +25,7 @@ export function TestimonialsSection() {
                     imageSrc={imgAllan}
                     description={
                         <>
-                            O meu objetivo principal nesse curso foi <span className="bg-[#DEFF00]/25 text-white px-1">simplesmente melhorar minha dicção</span>, porque eu sempre <span className="bg-[#DEFF00]/25 text-white px-1">falava muito rápido</span>, comia as palavras e sempre me incomodou quando as pessoas pediam para eu repetir, falar novamente.
+                            O meu objetivo principal nesse curso foi <span className="bg-[#DEFF00]/25 text-white px-1">simplesmente melhorar minha dicção</span>, porque <span className="bg-[#DEFF00]/25 text-white px-1">eu sempre falava muito rápido</span>, comia as palavras e sempre me incomodou quando as pessoas pediam para eu repetir, falar novamente.
                         </>
                     }
                 />
@@ -38,7 +38,7 @@ export function TestimonialsSection() {
                     imageSrc={imgCarlos}
                     description={
                         <>
-                            Hoje eu me sinto <span className="bg-[#DEFF00]/25 text-white px-1">uma pessoa mais autoconfiante</span>, <span className="bg-[#DEFF00]/25 text-white px-1">mais interessante</span> e que as pessoas buscam por conversar comigo.
+                            Hoje eu me sinto <span className="bg-[#DEFF00]/25 text-white px-1">uma pessoa mais autoconfiante</span>, <span className="bg-[#DEFF00]/25 text-white px-1">mais interessante e que as pessoas</span> buscam por conversar comigo.
                         </>
                     }
                 />
@@ -51,7 +51,7 @@ export function TestimonialsSection() {
                     imageSrc={imgSara}
                     description={
                         <>
-                            Então, realmente isso foi <span className="bg-[#DEFF00]/25 text-white px-1">uma transformação muito grande</span>, não apenas na minha carreira, mas também na <span className="bg-[#DEFF00]/25 text-white px-1">minha vida profissional</span>.
+                            Então, realmente isso foi <span className="bg-[#DEFF00]/25 text-white px-1">uma transformação</span> muito grande, não apenas na minha carreira, mas também na <span className="bg-[#DEFF00]/25 text-white px-1">minha vida profissional</span>.
                         </>
                     }
                 />
