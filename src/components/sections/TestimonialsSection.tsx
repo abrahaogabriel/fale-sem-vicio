@@ -38,7 +38,7 @@ export function TestimonialsSection() {
                     imageSrc={imgCarlos}
                     description={
                         <>
-                            Hoje eu me sinto <span className="bg-[#DEFF00]/25 text-white px-1">uma pessoa mais autoconfiante</span>, <span className="bg-[#DEFF00]/25 text-white px-1">mais interessante e que as pessoas</span> buscam por conversar comigo.
+                            E eu digo para vocês que a grande transformação que aconteceu na minha vida foi <span className="bg-[#DEFF00]/25 text-white px-1">que eu me tornei uma pessoa mais autoconfiante, mais interessante</span> e que as pessoas buscam por conversar comigo.
                         </>
                     }
                 />
@@ -64,7 +64,7 @@ export function TestimonialsSection() {
                     imageSrc={imgThiago}
                     description={
                         <>
-                            E eu achava que eu <span className="bg-[#DEFF00]/25 text-white px-1">não tinha como mudar isso</span>. Até que um dia eu ouvi e <span className="bg-[#DEFF00]/25 text-white px-1">conheci o Giovanni por meio de um podcast</span>.
+                            E eu achava que eu <span className="bg-[#DEFF00]/25 text-white px-1">não tinha como mudar isso.</span> Até que um dia eu ouvi e <span className="bg-[#DEFF00]/25 text-white px-1">conheci o Giovanni por meio de um podcast.</span>
                         </>
                     }
                 />
