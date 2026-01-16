@@ -2,11 +2,11 @@ import imgGiovanniAbout from "../../assets/giovanni_about.png";
 
 export function AboutSection() {
     return (
-        <section className="relative w-full bg-black py-20 px-6 xl:px-[120px] flex items-center justify-center overflow-hidden">
-            <div className="flex flex-col xl:flex-row gap-10 xl:gap-[149px] items-center w-full max-w-[1800px]">
+        <section className="relative w-full bg-black py-20 pl-6 xl:pl-[120px] pr-0 flex items-center overflow-hidden">
+            <div className="flex flex-col xl:flex-row gap-10 xl:gap-[149px] items-center w-full">
 
                 {/* Left Column: Text Content */}
-                <div className="flex flex-col gap-[30px] items-start text-white flex-1 max-w-[657px]">
+                <div className="flex flex-col gap-[30px] items-start text-white flex-shrink-0 w-full xl:w-[657px] pr-6 xl:pr-0">
                     {/* Title */}
                     <div className="font-sora font-medium text-[32px] xl:text-[40px] leading-tight">
                         <p className="text-[#DEFF00] mb-0">Giovanni Begossi</p>
@@ -19,15 +19,13 @@ export function AboutSection() {
                     </p>
                 </div>
 
-                {/* Right Column: Giovanni Image */}
-                <div className="relative shrink-0 w-full xl:w-auto max-w-[600px] xl:max-w-none">
-                    <div className="relative w-full xl:w-[600px] h-auto aspect-[1082/627] overflow-hidden">
-                        <img
-                            src={imgGiovanniAbout}
-                            alt="Giovanni Begossi"
-                            className="w-full h-full object-cover object-center"
-                        />
-                    </div>
+                {/* Right Column: Giovanni Image - Flush to the right edge */}
+                <div className="relative flex-1 w-full xl:w-auto h-[400px] xl:h-[627px] overflow-hidden">
+                    <img
+                        src={imgGiovanniAbout}
+                        alt="Giovanni Begossi"
+                        className="w-full h-full object-cover object-left xl:object-center"
+                    />
                 </div>
 
             </div>
