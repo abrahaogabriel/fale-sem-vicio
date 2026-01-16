@@ -26,21 +26,21 @@ export function CentralLogo() {
                 d="M346.356 311.155H253.49V404.02H346.356V311.155Z"
                 fill="#DEFF00"
                 animate={{ y: [0, -50, 0, 0] }}
-                transition={{ duration: 5, repeat: Infinity, times: [0, 0.08, 0.16, 1], ease: "easeInOut", delay: 0 }}
+                transition={{ duration: 4, repeat: Infinity, times: [0, 0.08, 0.16, 1], ease: "easeInOut", delay: 0 }}
             />
             {/* Middle Dot */}
             <motion.path
                 d="M501.915 311.155H409.049V404.021H501.915V311.155Z"
                 fill="#DEFF00"
                 animate={{ y: [0, -50, 0, 0] }}
-                transition={{ duration: 5, repeat: Infinity, times: [0, 0.08, 0.16, 1], ease: "easeInOut", delay: 0.15 }}
+                transition={{ duration: 4, repeat: Infinity, times: [0, 0.08, 0.16, 1], ease: "easeInOut", delay: 0.15 }}
             />
             {/* Right Dot */}
             <motion.path
                 d="M657.475 311.155H564.61V404.021H657.475V311.155Z"
                 fill="#DEFF00"
                 animate={{ y: [0, -50, 0, 0] }}
-                transition={{ duration: 5, repeat: Infinity, times: [0, 0.08, 0.16, 1], ease: "easeInOut", delay: 0.3 }}
+                transition={{ duration: 4, repeat: Infinity, times: [0, 0.08, 0.16, 1], ease: "easeInOut", delay: 0.3 }}
             />
             <path d="M766.894 0H144.107C64.6756 0 0 64.6756 0 144.107V708.164H433.862L687.169 913.313L654.647 708.164H724.499L684.673 676.01H617.024L642.314 835.607L445.278 676.01H32.1543V144.107C32.1543 82.3678 82.4044 32.1543 144.107 32.1543H766.894C828.633 32.1543 878.846 82.4045 878.846 144.107V564.058C878.846 615.079 871.836 658.281 825.036 671.679L811.895 705.448C905.531 687.022 911.001 639.378 911.001 564.058V144.107C911.001 64.6389 846.325 0 766.894 0Z" fill="#DEFF00" />
         </motion.svg>
