@@ -1,0 +1,27 @@
+version: "3.7"
+
+services:
+  fale_sem_vicio:
+    image: fale_sem_vicio:latest
+    build: .
+    networks:
+      - elprofessornet
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.role == manager
+      labels:
+        - traefik.enable=true
+        - traefik.http.routers.fale_sem_vicio.rule=Host(`cursos.elprofessordaoratoria.com.br`)
+        - traefik.http.routers.fale_sem_vicio.entrypoints=websecure
+        - traefik.http.routers.fale_sem_vicio.tls.certresolver=letsencryptresolver
+        - traefik.http.routers.fale_sem_vicio.service=fale_sem_vicio
+        - traefik.http.services.fale_sem_vicio.loadbalancer.server.port=80
+        - traefik.http.services.fale_sem_vicio.loadbalancer.passHostHeader=true
+
+networks:
+  elprofessornet:
+    name: elprofessornet
+    external: true
