@@ -54,7 +54,7 @@ export function ProblematicMoments() {
     ];
 
     return (
-        <section className="relative w-full bg-brand-dark py-[80px] px-6 md:px-[120px] flex flex-col items-center overflow-hidden">
+        <section className="relative w-full bg-brand-dark py-10 md:py-[80px] px-6 md:px-[120px] flex flex-col items-center overflow-hidden">
 
             <div className="w-full flex flex-col items-center text-center mb-16 max-w-[1200px]">
                 <BlurText
@@ -100,8 +100,8 @@ export function ProblematicMoments() {
                 viewport={{ once: true }}
                 transition={{ delay: 1, duration: 0.5 }}
             >
-                <a href="#preco" className="btn-outline flex items-center gap-4 group">
-                    <span className="uppercase tracking-wide font-medium text-lg md:text-[20px]">Quero corrigir esses problemas</span>
+                <a href="#preco" className="btn-outline flex items-center gap-4 group px-6 md:px-12">
+                    <span className="uppercase tracking-wide font-medium text-[16px] md:text-[20px] whitespace-nowrap">Quero corrigir esses problemas</span>
                     <div className="w-[18px] h-[18px] flex items-center justify-center">
                         <img
                             src={imgArrow}

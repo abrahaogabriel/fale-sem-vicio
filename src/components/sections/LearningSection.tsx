@@ -17,7 +17,7 @@ import { CircuitLine } from "../ui/CircuitLine";
 
 export function LearningSection() {
     return (
-        <section className="relative w-full bg-black py-20 px-6 md:px-[60px] lg:px-[120px] flex flex-col items-center overflow-hidden">
+        <section className="relative w-full bg-black py-10 md:py-20 px-6 md:px-[60px] lg:px-[120px] flex flex-col items-center overflow-hidden">
 
             {/* Header */}
             <div className="w-full flex flex-col items-center gap-4 mb-20 relative z-10">
@@ -33,7 +33,7 @@ export function LearningSection() {
             </div>
 
             {/* Main Content Area - Radial Layout */}
-            <div className="relative w-full max-w-full md:max-w-[1800px] flex flex-col md:grid md:grid-cols-[1fr_auto_1fr] gap-y-16 md:gap-x-12 lg:gap-x-32 items-center justify-center">
+            <div className="relative w-full max-w-full md:max-w-[1800px] flex flex-col md:grid md:grid-cols-[1fr_auto_1fr] gap-y-10 md:gap-y-16 md:gap-x-12 lg:gap-x-32 items-center justify-center">
 
                 {/* --- SVG LINES LAYER (Desktop Only) --- */}
                 <div className="absolute inset-0 hidden md:block pointer-events-none z-0">
@@ -50,7 +50,7 @@ export function LearningSection() {
                 </div>
 
                 {/* --- LEFT COL (Cards) --- */}
-                <div className="flex flex-col gap-16 md:gap-[150px] justify-center items-end h-full w-full pr-8">
+                <div className="flex flex-col gap-8 md:gap-[150px] justify-center items-center md:items-end h-full w-full md:pr-8">
                     {/* Top Left Card */}
                     <div className="relative flex items-center z-20">
                         <div className="relative z-30 w-full">
@@ -87,7 +87,7 @@ export function LearningSection() {
                 </div>
 
                 {/* --- RIGHT COL (Cards) --- */}
-                <div className="flex flex-col gap-16 md:gap-[150px] justify-center items-start h-full w-full pl-8">
+                <div className="flex flex-col gap-8 md:gap-[150px] justify-center items-center md:items-start h-full w-full md:pl-8">
                     {/* Top Right Card */}
                     <div className="relative flex items-center z-20">
                         <div className="hidden md:block absolute -left-[43px] top-1/2 -translate-y-1/2 z-10 scale-75 lg:scale-100">

@@ -62,7 +62,7 @@ export function Hero() {
                     showCursor={true}
                     cursorCharacter="|"
                     cursorClassName="font-sans text-white/50" // generic font to avoid Bebas Neue square
-                    className="font-bebas text-[max(20vw,200px)] leading-none text-center whitespace-nowrap"
+                    className="font-bebas text-[50px] md:text-[max(20vw,200px)] leading-none text-center whitespace-nowrap"
                     style={{
                         WebkitTextStroke: '2px #FFFFFF',
                         WebkitTextFillColor: 'transparent',
@@ -74,7 +74,7 @@ export function Hero() {
             {/* --- LAYER 3: SPECIALIST & SMOKE EFFECTS --- */}
             <motion.div
                 style={{ y: yGiovanni, opacity: opacityGiovanni, filter: filterGiovanni }}
-                className="absolute inset-0 z-20 flex justify-center items-end pointer-events-none pb-[12vh]"
+                className="absolute inset-0 z-20 flex justify-center items-end pointer-events-none pb-[20vh] md:pb-[12vh]"
             >
                 {/* Giovanni (El Professor) - Sized to exactly 733px width from Figma */}
                 <div className="relative w-full max-w-[733px] px-4 flex justify-center items-end h-full">
@@ -109,7 +109,7 @@ export function Hero() {
             {/* --- LAYER 5: LOGO --- */}
             <motion.div
                 style={{ y: yForeground }}
-                className="absolute top-[80px] left-[6vw] md:left-[120px] z-40 pointer-events-none"
+                className="absolute top-[80px] left-1/2 -translate-x-1/2 md:left-[120px] md:translate-x-0 z-40 pointer-events-none"
             >
                 <div className="w-[225px]">
                     <img
@@ -134,7 +134,7 @@ export function Hero() {
                         delay={50}
                         animateBy="words"
                         direction="bottom"
-                        className="text-[28px] md:text-[40px] leading-[1.2] text-center justify-center"
+                        className="text-[22px] md:text-[40px] leading-[1.2] text-center justify-center"
                     />
                 </div>
 
@@ -143,8 +143,8 @@ export function Hero() {
                     animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
                     transition={{ delay: 1.2, duration: 0.8, ease: "easeOut" }}
                 >
-                    <a href="#preco" className="btn-outline flex items-center gap-4 group cursor-pointer pointer-events-auto shrink-0">
-                        <span className="uppercase tracking-wide font-medium text-lg md:text-[20px]">Quero falar sem vício</span>
+                    <a href="#preco" className="btn-outline flex items-center gap-4 group cursor-pointer pointer-events-auto shrink-0 px-6 md:px-12">
+                        <span className="uppercase tracking-wide font-medium text-[16px] md:text-[20px] whitespace-nowrap">Quero falar sem vício</span>
                         <div className="w-[18px] h-[18px] flex items-center justify-center">
                             <img
                                 src={imgArrow}

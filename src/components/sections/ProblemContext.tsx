@@ -32,7 +32,7 @@ function EchoTitle() {
                         initial={{ scale: 1, opacity: 0.5 }}
                         animate={{ scale: 1.4, opacity: 0 }}
                         transition={{ duration: 1, ease: "easeOut" }}
-                        className="absolute font-bebas text-[max(15vw,120px)] leading-none text-center whitespace-nowrap select-none"
+                        className="absolute font-bebas text-[45px] md:text-[max(15vw,120px)] leading-none text-center whitespace-nowrap select-none"
                         style={{
                             WebkitTextStroke: '1px #DEFF0033',
                             WebkitTextFillColor: 'transparent',
@@ -43,7 +43,7 @@ function EchoTitle() {
 
                     {/* Main Outline Text */}
                     <h2
-                        className="font-bebas text-[max(12vw,120px)] leading-none text-center whitespace-nowrap select-none"
+                        className="font-bebas text-[40px] md:text-[max(12vw,120px)] leading-none text-center whitespace-nowrap select-none"
                         style={{
                             WebkitTextStroke: '2px #DEFF00',
                             WebkitTextFillColor: 'transparent',
@@ -59,7 +59,7 @@ function EchoTitle() {
 
 export function ProblemContext() {
     return (
-        <section className="relative w-full bg-brand-dark py-[80px] px-6 md:px-[80px] flex flex-col items-center overflow-hidden">
+        <section className="relative w-full bg-brand-dark py-10 md:py-[80px] px-6 md:px-[80px] flex flex-col items-center overflow-hidden">
 
             {/* Logo Icon - Width fixed to 86px to match Figma without stretching */}
             <div className="mb-[30px] flex justify-center">
@@ -94,8 +94,8 @@ export function ProblemContext() {
 
             {/* CTA */}
             <div className="mb-[20px]">
-                <a href="#preco" className="btn-outline flex items-center gap-4 group">
-                    <span className="uppercase tracking-wide font-medium text-lg md:text-[20px]">Quero corrigir esses problemas</span>
+                <a href="#preco" className="btn-outline flex items-center gap-4 group px-6 md:px-12">
+                    <span className="uppercase tracking-wide font-medium text-[16px] md:text-[20px] whitespace-nowrap">Quero corrigir esses problemas</span>
                     <div className="w-[18px] h-[18px] flex items-center justify-center">
                         <img
                             src={imgArrow}

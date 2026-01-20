@@ -35,7 +35,7 @@ const PriceLogo = () => (
 
 export function PriceSection() {
     return (
-        <section id="preco" className="relative w-full bg-black py-20 px-6 xl:px-[120px] flex flex-col items-center justify-center overflow-hidden">
+        <section id="preco" className="relative w-full bg-black py-10 md:py-20 px-6 xl:px-[120px] flex flex-col items-center justify-center overflow-hidden">
             {/* Title */}
             <motion.div
                 className="w-full max-w-[1240px] text-center mb-[80px]"
@@ -100,7 +100,7 @@ export function PriceSection() {
                         <div className="flex flex-col items-center gap-8">
                             <span className="text-[#808080] font-sora text-[20px] opacity-60">Por apenas 12x de</span>
                             {/* Huge Price Font */}
-                            <div className="text-[#DEFF00] font-helvetica font-bold text-[80px] lg:text-[110px] leading-[0.9] tracking-tighter -my-2">
+                            <div className="text-[#DEFF00] font-helvetica font-bold text-[56px] md:text-[80px] lg:text-[110px] leading-[0.9] tracking-tighter -my-2 whitespace-nowrap">
                                 R$ 10,18
                             </div>
                             <span className="text-[#808080] font-sora text-[20px] opacity-60">Ou apenas R$97,00 à vista</span>
@@ -114,14 +114,14 @@ export function PriceSection() {
 
                         {/* Security Footer */}
                         <div className="flex flex-col items-center gap-4 w-full pt-2">
-                            <div className="flex items-center gap-6 text-[#9CA3AF] text-sm">
-                                <div className="flex items-center gap-2">
-                                    <Lock size={20} className="text-[#DEFF00]" />
-                                    <span className="text-[#808080] font-sora text-[20px]">Compra 100% segura</span>
+                            <div className="flex items-center gap-2 sm:gap-6 text-[#9CA3AF] text-sm whitespace-nowrap">
+                                <div className="flex items-center gap-1 sm:gap-2">
+                                    <Lock size={16} className="text-[#DEFF00] sm:w-[20px] sm:h-[20px]" />
+                                    <span className="text-[#808080] font-sora text-[14px] md:text-[20px]">Compra 100% segura</span>
                                 </div>
-                                <div className="flex items-center gap-2">
-                                    <ShieldCheck size={20} className="text-[#DEFF00]" />
-                                    <span className="text-[#808080] font-sora text-[20px]">Garantia de 7 dias</span>
+                                <div className="flex items-center gap-1 sm:gap-2">
+                                    <ShieldCheck size={16} className="text-[#DEFF00] sm:w-[20px] sm:h-[20px]" />
+                                    <span className="text-[#808080] font-sora text-[14px] md:text-[20px]">Garantia de 7 dias</span>
                                 </div>
                             </div>
                             {/* Card Logos */}
