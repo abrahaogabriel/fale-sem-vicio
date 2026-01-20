@@ -60,7 +60,7 @@ export function Hero() {
                     pauseDuration={2000}
                     deletingSpeed={45}
                     cursorBlinkDuration={1}
-                    showCursor={true}
+                    showCursor={false}
                     cursorCharacter="|"
                     cursorClassName="font-sans text-white/50" // generic font to avoid Bebas Neue square
                     className="font-bebas text-[50px] md:text-[max(20vw,200px)] leading-none text-center whitespace-nowrap"
