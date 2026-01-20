@@ -6,4 +6,3 @@ dist
 Dockerfile
 docker-compose.yml
 build.sh
-nginx.conf
