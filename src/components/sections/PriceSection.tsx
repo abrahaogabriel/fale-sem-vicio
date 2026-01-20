@@ -35,7 +35,7 @@ const PriceLogo = () => (
 
 export function PriceSection() {
     return (
-        <section className="relative w-full bg-black py-20 px-6 xl:px-[120px] flex flex-col items-center justify-center overflow-hidden">
+        <section id="preco" className="relative w-full bg-black py-20 px-6 xl:px-[120px] flex flex-col items-center justify-center overflow-hidden">
             {/* Title */}
             <motion.div
                 className="w-full max-w-[1240px] text-center mb-[80px]"

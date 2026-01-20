@@ -100,7 +100,7 @@ export function ProblematicMoments() {
                 viewport={{ once: true }}
                 transition={{ delay: 1, duration: 0.5 }}
             >
-                <button className="btn-outline flex items-center gap-4 group">
+                <a href="#preco" className="btn-outline flex items-center gap-4 group">
                     <span className="uppercase tracking-wide font-medium text-lg md:text-[20px]">Quero corrigir esses problemas</span>
                     <div className="w-[18px] h-[18px] flex items-center justify-center">
                         <img
@@ -109,7 +109,7 @@ export function ProblematicMoments() {
                             className="w-full h-full transition-transform group-hover:translate-x-1"
                         />
                     </div>
-                </button>
+                </a>
             </motion.div>
 
             {/* Divisor */}

@@ -143,7 +143,7 @@ export function Hero() {
                     animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
                     transition={{ delay: 1.2, duration: 0.8, ease: "easeOut" }}
                 >
-                    <button className="btn-outline flex items-center gap-4 group cursor-pointer pointer-events-auto shrink-0">
+                    <a href="#preco" className="btn-outline flex items-center gap-4 group cursor-pointer pointer-events-auto shrink-0">
                         <span className="uppercase tracking-wide font-medium text-lg md:text-[20px]">Quero falar sem vício</span>
                         <div className="w-[18px] h-[18px] flex items-center justify-center">
                             <img
@@ -152,7 +152,7 @@ export function Hero() {
                                 className="w-full h-full transition-transform group-hover:translate-x-1"
                             />
                         </div>
-                    </button>
+                    </a>
                 </motion.div>
             </motion.div>
 
