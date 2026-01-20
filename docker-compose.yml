@@ -14,16 +14,8 @@ services:
           - node.role == manager
       labels:
         - traefik.enable=true
-        # Redirecionamento HTTP para HTTPS
-        - traefik.http.routers.fale_sem_vicio_http.rule=Host(`cursos.elprofessordaoratoria.com.br`)
-        - traefik.http.routers.fale_sem_vicio_http.entrypoints=web
-        - traefik.http.routers.fale_sem_vicio_http.middlewares=falesemvicio-redirect
-        - traefik.http.middlewares.falesemvicio-redirect.redirectscheme.scheme=https
-
-        # Configuração HTTPS Secure
         - traefik.http.routers.fale_sem_vicio.rule=Host(`cursos.elprofessordaoratoria.com.br`)
         - traefik.http.routers.fale_sem_vicio.entrypoints=websecure
-        - traefik.http.routers.fale_sem_vicio.tls=true
         - traefik.http.routers.fale_sem_vicio.tls.certresolver=letsencryptresolver
         - traefik.http.routers.fale_sem_vicio.service=fale_sem_vicio
         - traefik.http.services.fale_sem_vicio.loadbalancer.server.port=80
