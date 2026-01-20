@@ -7,6 +7,7 @@ import { TestimonialsSection } from './components/sections/TestimonialsSection';
 import { PriceSection } from './components/sections/PriceSection'; // Dobra 08
 import { AboutSection } from './components/sections/AboutSection'; // Dobra 09
 import { FAQSection } from './components/sections/FAQSection'; // Dobra 10
+import { Footer } from './components/sections/Footer'; // Rodapé
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <PriceSection />
       <AboutSection />
       <FAQSection />
+      <Footer />
     </main>
   );
 }
