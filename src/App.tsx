@@ -6,6 +6,7 @@ import { LearningSection } from "./components/sections/LearningSection";
 import { TestimonialsSection } from './components/sections/TestimonialsSection'; // Dobra 07
 import { PriceSection } from './components/sections/PriceSection'; // Dobra 08
 import { AboutSection } from './components/sections/AboutSection'; // Dobra 09
+import { FAQSection } from './components/sections/FAQSection'; // Dobra 10
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <TestimonialsSection />
       <PriceSection />
       <AboutSection />
+      <FAQSection />
     </main>
   );
 }
