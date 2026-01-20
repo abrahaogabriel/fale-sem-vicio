@@ -45,6 +45,7 @@ export function Hero() {
                     src={imgBgMain}
                     alt="Background"
                     className="w-full h-full object-cover scale-110" // scale slightly to avoid white gaps on edges
+                    fetchPriority="high"
                 />
             </motion.div>
 
@@ -95,6 +96,8 @@ export function Hero() {
                         src={imgGiovanni}
                         alt="Giovanni Begossi"
                         className="w-full h-auto block relative z-10 max-h-[80vh] object-contain"
+                        loading="eager"
+                        fetchPriority="high"
                     />
                 </div>
             </motion.div>
