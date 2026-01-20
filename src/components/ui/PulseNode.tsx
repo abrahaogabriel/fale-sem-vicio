@@ -5,7 +5,7 @@ interface PulseNodeProps {
     duration?: number;
 }
 
-export function PulseNode({ delay = 0, duration = 0 }: PulseNodeProps) {
+export function PulseNode({ delay: _delay = 0, duration: _duration = 0 }: PulseNodeProps) {
     // Reverted to continuous looping animation as requested.
     // Props are kept to avoid breaking parent usage, but ignored for the animation loop.
     return (
