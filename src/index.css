@@ -1,5 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Figtree:wght@400;700&family=Just+Another+Hand&family=Quicksand:wght@400;500;700&family=Sora:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Just+Another+Hand&family=Bebas_Neue&display=swap');
 
 @theme {
   --color-brand-lime: #DEFF00;
@@ -9,6 +9,8 @@
   --font-sora: "Sora", sans-serif;
   --font-hand: "Just Another Hand", cursive;
   --font-bebas: "Bebas Neue", sans-serif;
+  --font-figtree: "Figtree", sans-serif;
+  --font-quicksand: "Quicksand", sans-serif;
 
   --radius-btn: 8px;
   --radius-card: 14px;
