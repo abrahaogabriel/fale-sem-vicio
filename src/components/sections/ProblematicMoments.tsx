@@ -36,7 +36,7 @@ const Card = ({ bg, title, description, index }: CardProps) => (
         />
 
         {/* Content */}
-        <div className="absolute bottom-8 left-0 right-0 px-6 text-center z-10">
+        <div className="absolute bottom-8 left-0 right-0 px-[15px] text-center z-10">
             <p className="text-[20px] md:text-[22px] leading-[1.3] text-[#BCBCBC]">
                 <span className="font-bold text-brand-lime">{title}</span>, {description}
             </p>

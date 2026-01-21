@@ -74,7 +74,7 @@ export function ProblemContext() {
             </div>
 
             {/* Subtitle Box */}
-            <div className="max-w-[1412px] w-full mb-[40px] bg-brand-lime/10 border border-brand-lime rounded-[12px] px-[30px] py-[20px] text-center">
+            <div className="max-w-[1412px] w-full mb-[40px] bg-brand-lime/10 border border-brand-lime rounded-[12px] px-[15px] md:px-[30px] py-[20px] text-center">
                 <p className="text-white text-lg md:text-[22px] leading-[1.6]">
                     Quando você não se comunica bem estes vícios entram no meio da frase, <span className="font-bold">quebram o raciocínio e enfraquecem sua fala</span><br className="hidden md:block" /> sem que você perceba. Não importa se o conteúdo é bom ou se você domina o assunto. Quando a fala é interrompida por
                 </p>

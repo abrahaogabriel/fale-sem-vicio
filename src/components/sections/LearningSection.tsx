@@ -25,7 +25,7 @@ export function LearningSection() {
                     <span className="text-white font-normal">O que você vai aprender com o </span>
                     <span className="text-brand-lime font-bold">Fale Sem Vício</span>
                 </h2>
-                <div className="bg-brand-lime/10 border border-brand-lime rounded-[12px] px-[30px] py-[15px]">
+                <div className="bg-brand-lime/10 border border-brand-lime rounded-[12px] px-[15px] md:px-[30px] py-[15px]">
                     <p className="text-white text-lg md:text-[22px] text-center font-sora">
                         Sem precisar falar de forma robótica, apenas dominando suas próprias falas!
                     </p>

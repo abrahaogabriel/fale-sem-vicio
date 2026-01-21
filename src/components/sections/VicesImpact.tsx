@@ -68,7 +68,7 @@ export function VicesImpact() {
                             backgroundColor: "rgba(255, 255, 255, 0.12)",
                             borderColor: "rgba(222, 255, 0, 0.4)"
                         }}
-                        className="w-full md:w-[391px] h-[168px] backdrop-blur-[13px] bg-white/10 border border-white/20 rounded-[20px] flex items-center justify-center gap-6 px-8 transition-colors duration-300"
+                        className="w-full md:w-[391px] h-[168px] backdrop-blur-[13px] bg-white/10 border border-white/20 rounded-[20px] flex items-center justify-center gap-4 md:gap-6 px-[15px] md:px-8 transition-colors duration-300"
                     >
                         <div className="w-[31px] h-auto flex-shrink-0">
                             <img src={card.icon} alt="icon" className="w-full h-full object-contain" />
