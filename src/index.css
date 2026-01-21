@@ -56,4 +56,8 @@
   .btn-outline {
     @apply border border-brand-lime rounded-btn px-12 py-4 text-brand-lime text-[20px] font-medium transition-all hover:bg-brand-lime/10 flex items-center gap-3.5;
   }
+
+  .btn-primary {
+    @apply bg-brand-lime border border-brand-lime rounded-[8px] px-12 py-4 text-brand-dark text-[20px] font-medium transition-all hover:bg-transparent hover:text-brand-lime flex items-center gap-3.5;
+  }
 }

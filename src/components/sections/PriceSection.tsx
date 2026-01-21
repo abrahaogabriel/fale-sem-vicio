@@ -1,9 +1,8 @@
-import { ArrowRight, Lock, ShieldCheck } from "lucide-react";
+import { Lock, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
 import imgGiovanni from "../../assets/giovannisrc.png";
 import imgLogosCartao from "../../assets/logos_cartao.svg";
 import imgCheckYellow from "../../assets/check_yellow.svg";
-const imgArrow = "/assets/arrow.svg";
 
 // SVG for the Price Box Logo
 const PriceLogo = () => (
@@ -108,14 +107,13 @@ export function PriceSection() {
                         </div>
 
                         {/* CTA Button */}
-                        <a href="#preco" className="btn-outline flex items-center gap-4 group px-12 mt-4 cursor-pointer">
+                        <a href="#preco" className="btn-primary flex items-center gap-4 group px-12 mt-4 cursor-pointer justify-center">
                             <span className="uppercase tracking-wide font-medium text-[16px] md:text-[20px] whitespace-nowrap">Quero falar sem vício</span>
-                            <div className="w-[18px] h-[18px] flex items-center justify-center">
-                                <img
-                                    src={imgArrow}
-                                    alt="Arrow"
-                                    className="w-full h-full transition-transform group-hover:translate-x-1"
-                                />
+                            <div className="shrink-0 transition-transform group-hover:translate-x-1">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="11" cy="11" r="10" stroke="currentColor" strokeWidth="1.5" />
+                                    <path d="M9 11H13M13 11L11 9M13 11L11 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
                             </div>
                         </a>
 
