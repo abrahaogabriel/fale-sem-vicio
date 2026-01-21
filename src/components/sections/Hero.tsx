@@ -120,10 +120,11 @@ export function Hero() {
                     initial={{ opacity: 0, y: 20, filter: 'blur(10px)' }}
                     animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
                     transition={{ delay: 1.2, duration: 0.8, ease: "easeOut" }}
+                    className="w-full flex justify-center"
                 >
-                    <a href="#preco" className="btn-outline flex items-center gap-4 group cursor-pointer pointer-events-auto shrink-0 px-6 md:px-12">
-                        <span className="uppercase tracking-wide font-medium text-[16px] md:text-[20px] whitespace-nowrap">Quero falar sem vício</span>
-                        <div className="w-[18px] h-[18px] flex items-center justify-center">
+                    <a href="#preco" className="btn-outline flex items-center gap-4 group cursor-pointer pointer-events-auto shrink-0 px-6 md:px-12 w-full md:w-auto justify-center">
+                        <span className="uppercase tracking-wide font-medium text-[14px] md:text-[20px] text-center">Quero falar sem vício</span>
+                        <div className="w-[18px] h-[18px] flex items-center justify-center shrink-0">
                             <img
                                 src={imgArrow}
                                 alt="Arrow"

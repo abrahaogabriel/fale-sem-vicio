@@ -93,10 +93,10 @@ export function ProblemContext() {
             </div>
 
             {/* CTA */}
-            <div className="mb-[20px]">
-                <a href="#preco" className="btn-outline flex items-center gap-4 group px-6 md:px-12">
-                    <span className="uppercase tracking-wide font-medium text-[16px] md:text-[20px] whitespace-nowrap">Quero corrigir esses problemas</span>
-                    <div className="w-[18px] h-[18px] flex items-center justify-center">
+            <div className="mb-[20px] w-full flex justify-center">
+                <a href="#preco" className="btn-outline flex items-center gap-4 group px-6 md:px-12 w-full md:w-auto justify-center">
+                    <span className="uppercase tracking-wide font-medium text-[14px] md:text-[20px] text-center">Quero corrigir esses problemas</span>
+                    <div className="w-[18px] h-[18px] flex items-center justify-center shrink-0">
                         <img
                             src={imgArrow}
                             alt="Arrow"

@@ -22,7 +22,7 @@ const Card = ({ bg, title, description, index }: CardProps) => (
         whileHover={{ opacity: 1, scale: 1.02 }}
         viewport={{ once: true }}
         transition={{ delay: index * 0.1, duration: 0.6 }}
-        className="relative w-[396px] h-[380px] rounded-[8px] overflow-hidden border border-[#4E4E4E] group cursor-pointer"
+        className="relative w-full md:w-[396px] h-[380px] rounded-[8px] overflow-hidden border border-[#4E4E4E] group cursor-pointer"
     >
         <img
             src={bg}
@@ -80,14 +80,14 @@ export function ProblematicMoments() {
             </div>
 
             {/* Grid Row 1 */}
-            <div className="flex flex-wrap justify-center gap-8 mb-8 max-w-[1300px]">
+            <div className="flex flex-wrap justify-center gap-8 mb-8 max-w-[1300px] w-full">
                 {cards.slice(0, 3).map((card, i) => (
                     <Card key={i} {...card} index={i} />
                 ))}
             </div>
 
             {/* Grid Row 2 */}
-            <div className="flex flex-wrap justify-center gap-8 mb-16 max-w-[1300px]">
+            <div className="flex flex-wrap justify-center gap-8 mb-16 max-w-[1300px] w-full">
                 {cards.slice(3).map((card, i) => (
                     <Card key={i + 3} {...card} index={i + 3} />
                 ))}
@@ -99,10 +99,11 @@ export function ProblematicMoments() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 1, duration: 0.5 }}
+                className="w-full flex justify-center"
             >
-                <a href="#preco" className="btn-outline flex items-center gap-4 group px-6 md:px-12">
-                    <span className="uppercase tracking-wide font-medium text-[16px] md:text-[20px] whitespace-nowrap">Quero corrigir esses problemas</span>
-                    <div className="w-[18px] h-[18px] flex items-center justify-center">
+                <a href="#preco" className="btn-outline flex items-center gap-4 group px-6 md:px-12 w-full md:w-auto justify-center">
+                    <span className="uppercase tracking-wide font-medium text-[14px] md:text-[20px] text-center">Quero corrigir esses problemas</span>
+                    <div className="w-[18px] h-[18px] flex items-center justify-center shrink-0">
                         <img
                             src={imgArrow}
                             alt="Arrow"
