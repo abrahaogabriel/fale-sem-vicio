@@ -89,7 +89,7 @@ export function FAQSection() {
                                     className="overflow-hidden"
                                 >
                                     <div className="px-4 md:px-10 pb-9">
-                                        <p className="font-sora text-[16px] md:text-[18px] text-white/80 leading-relaxed max-w-[900px]">
+                                        <p className="font-sora text-[16px] md:text-[18px] text-white/80 leading-relaxed">
                                             {item.answer}
                                         </p>
                                     </div>

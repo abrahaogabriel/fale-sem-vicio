@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import imgGiovanni from "../../assets/giovannisrc.png";
 import imgLogosCartao from "../../assets/logos_cartao.svg";
 import imgCheckYellow from "../../assets/check_yellow.svg";
+const imgArrow = "/assets/arrow.svg";
 
 // SVG for the Price Box Logo
 const PriceLogo = () => (
@@ -107,10 +108,16 @@ export function PriceSection() {
                         </div>
 
                         {/* CTA Button */}
-                        <button className="w-full bg-[#DEFF00] hover:bg-[#cbe600] text-[#1E1E1E] font-sora font-medium text-[18px] py-4 rounded-xl transition-colors flex items-center justify-center gap-2 group mt-4">
-                            QUERO FALAR SEM VÍCIO
-                            <ArrowRight className="group-hover:translate-x-1 transition-transform w-5 h-5" />
-                        </button>
+                        <a href="#preco" className="btn-outline flex items-center gap-4 group px-12 mt-4 cursor-pointer">
+                            <span className="uppercase tracking-wide font-medium text-[16px] md:text-[20px] whitespace-nowrap">Quero falar sem vício</span>
+                            <div className="w-[18px] h-[18px] flex items-center justify-center">
+                                <img
+                                    src={imgArrow}
+                                    alt="Arrow"
+                                    className="w-full h-full transition-transform group-hover:translate-x-1"
+                                />
+                            </div>
+                        </a>
 
                         {/* Security Footer */}
                         <div className="flex flex-col items-center gap-4 w-full pt-2">

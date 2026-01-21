@@ -37,7 +37,7 @@ export function VicesImpact() {
                 className="text-[32px] md:text-[40px] leading-[1.2] text-center mb-6 max-w-[1244px] font-sora"
             >
                 <span className="text-brand-lime font-bold">Vícios de linguagem </span>
-                <span className="text-[#FAFFD5] font-normal">te prejudicam mais do que você imagina</span>
+                <span className="text-white font-normal">te prejudicam mais do que você imagina</span>
             </motion.h2>
 
             {/* H2 */}
