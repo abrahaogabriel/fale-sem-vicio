@@ -54,7 +54,7 @@ export function ProblematicMoments() {
     ];
 
     return (
-        <section className="relative w-full bg-brand-dark py-10 md:py-[80px] px-6 md:px-[120px] flex flex-col items-center overflow-hidden">
+        <section className="relative w-full bg-brand-dark py-10 md:py-[80px] px-[15px] md:px-[120px] flex flex-col items-center overflow-hidden">
 
             <div className="w-full flex flex-col items-center text-center mb-16 max-w-[1200px]">
                 <BlurText
@@ -65,7 +65,7 @@ export function ProblematicMoments() {
                     delay={40}
                     animateBy="words"
                     direction="bottom"
-                    className="text-[32px] md:text-[40px] leading-[1.2] mb-4 text-center justify-center"
+                    className="text-[24px] md:text-[40px] leading-[1.2] mb-4 text-center justify-center"
                 />
 
                 <motion.p

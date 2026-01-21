@@ -1,5 +1,4 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import TextType from "../ui/TextType";
 import BlurText from "../ui/BlurText";
 
 // Assets (Local now)
@@ -15,12 +14,10 @@ export function Hero() {
 
     // Parallax Offsets: Values adjusted for more noticeable depth.
     const yBg = useTransform(scrollY, [0, 800], [0, 300]);
-    const yTextType = useTransform(scrollY, [0, 800], [0, 180]);
     const yGiovanni = useTransform(scrollY, [0, 800], [0, 100]);
     const yForeground = useTransform(scrollY, [0, 800], [0, -50]); // Moving slightly up for more contrast
 
     // Fade-to-Black and Opacity effects for background layers
-    const opacityTextType = useTransform(scrollY, [0, 500], [0.8, 0]);
     const brightnessBg = useTransform(scrollY, [0, 500], ["brightness(1)", "brightness(0)"]);
     const opacityBg = useTransform(scrollY, [0, 600], [1, 0]);
 
@@ -49,28 +46,6 @@ export function Hero() {
                 />
             </motion.div>
 
-            {/* --- LAYER 2: LARGE BEBAS NEUE OUTLINE ANIMATED TEXT --- */}
-            <motion.div
-                style={{ y: yTextType, opacity: opacityTextType }}
-                className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none select-none overflow-hidden pb-[15vh]"
-            >
-                <TextType
-                    text={["ÉÉÉÉÉÉÉÉ!", "ENTÃÃOOOO...", "TIPO... TIPO...", "MAS... MAS...", "ÉÉÉÉ... QUE", "ENTÃO..."]}
-                    as="h2"
-                    pauseDuration={2000}
-                    deletingSpeed={45}
-                    cursorBlinkDuration={1}
-                    showCursor={false}
-                    cursorCharacter="|"
-                    cursorClassName="font-sans text-white/50" // generic font to avoid Bebas Neue square
-                    className="font-bebas text-[50px] md:text-[max(20vw,200px)] leading-none text-center whitespace-nowrap"
-                    style={{
-                        WebkitTextStroke: '2px #FFFFFF',
-                        WebkitTextFillColor: 'transparent',
-                        opacity: 0.8
-                    }}
-                />
-            </motion.div>
 
             {/* --- LAYER 3: SPECIALIST & SMOKE EFFECTS --- */}
             <motion.div
@@ -126,7 +101,7 @@ export function Hero() {
             {/* --- LAYER 6: MAIN HEADLINE & CTA --- */}
             <motion.div
                 style={{ y: yForeground }}
-                className="relative z-50 flex flex-col items-center text-center mt-auto pb-[6vh] px-6 w-full max-w-[1440px]"
+                className="relative z-50 flex flex-col items-center text-center mt-auto pb-[40px] px-[15px] w-full max-w-[1440px]"
             >
                 <div className="mb-8 w-full max-w-[1415px]">
                     <BlurText
@@ -137,7 +112,7 @@ export function Hero() {
                         delay={50}
                         animateBy="words"
                         direction="bottom"
-                        className="text-[22px] md:text-[40px] leading-[1.2] text-center justify-center"
+                        className="text-[24px] md:text-[40px] leading-[1.2] text-center justify-center"
                     />
                 </div>
 

@@ -2,13 +2,13 @@ import imgGiovanniAbout from "../../assets/giovanni_about.png";
 
 export function AboutSection() {
     return (
-        <section className="relative w-full bg-black py-20 pl-6 xl:pl-[120px] pr-0 flex items-center overflow-hidden">
+        <section className="relative w-full bg-black py-10 md:py-20 pl-[15px] xl:pl-[120px] pr-0 flex items-center overflow-hidden">
             <div className="flex flex-col xl:flex-row gap-10 xl:gap-[149px] items-center w-full">
 
                 {/* Left Column: Text Content */}
-                <div className="flex flex-col gap-[30px] items-start text-white flex-shrink-0 w-full xl:w-[657px] pr-6 xl:pr-0">
+                <div className="flex flex-col gap-[30px] items-start text-white flex-shrink-0 w-full xl:w-[657px] pr-[15px] xl:pr-0">
                     {/* Title */}
-                    <div className="font-sora font-medium text-[32px] xl:text-[40px] leading-tight">
+                    <div className="font-sora font-medium text-[24px] xl:text-[40px] leading-tight">
                         <p className="text-[#DEFF00] mb-0">Giovanni Begossi</p>
                         <p className="text-white">O El Professor da Oratória</p>
                     </div>

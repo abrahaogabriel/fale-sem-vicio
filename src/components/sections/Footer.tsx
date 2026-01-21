@@ -1,6 +1,6 @@
 export function Footer() {
     return (
-        <footer className="relative w-full bg-black py-20 px-6 xl:px-[120px] flex items-center justify-center">
+        <footer className="relative w-full bg-black py-10 md:py-20 px-[15px] xl:px-[120px] flex items-center justify-center">
             <div className="text-center text-white text-[18px] leading-[24px] max-w-[1505px]">
                 <p className="mb-0 font-figtree font-normal">
                     Desenvolvido por{" "}

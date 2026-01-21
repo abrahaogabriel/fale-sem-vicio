@@ -17,7 +17,7 @@ function EchoTitle() {
     }, []);
 
     return (
-        <div className="relative w-full h-[280px] flex items-center justify-center overflow-hidden">
+        <div className="relative w-full h-[180px] md:h-[280px] flex items-center justify-center overflow-hidden">
             <AnimatePresence mode="wait">
                 <motion.div
                     key={index}
@@ -32,7 +32,7 @@ function EchoTitle() {
                         initial={{ scale: 1, opacity: 0.5 }}
                         animate={{ scale: 1.4, opacity: 0 }}
                         transition={{ duration: 1, ease: "easeOut" }}
-                        className="absolute font-bebas text-[45px] md:text-[max(15vw,120px)] leading-none text-center whitespace-nowrap select-none"
+                        className="absolute font-bebas text-[55px] md:text-[max(15vw,120px)] leading-none text-center whitespace-nowrap select-none"
                         style={{
                             WebkitTextStroke: '1px #DEFF0033',
                             WebkitTextFillColor: 'transparent',
@@ -43,7 +43,7 @@ function EchoTitle() {
 
                     {/* Main Outline Text */}
                     <h2
-                        className="font-bebas text-[40px] md:text-[max(12vw,120px)] leading-none text-center whitespace-nowrap select-none"
+                        className="font-bebas text-[50px] md:text-[max(12vw,120px)] leading-none text-center whitespace-nowrap select-none"
                         style={{
                             WebkitTextStroke: '2px #DEFF00',
                             WebkitTextFillColor: 'transparent',
@@ -59,7 +59,7 @@ function EchoTitle() {
 
 export function ProblemContext() {
     return (
-        <section className="relative w-full bg-brand-dark py-10 md:py-[80px] px-6 md:px-[80px] flex flex-col items-center overflow-hidden">
+        <section className="relative w-full bg-brand-dark py-10 md:py-[80px] px-[15px] md:px-[80px] flex flex-col items-center overflow-hidden">
 
             {/* Logo Icon - Width fixed to 86px to match Figma without stretching */}
             <div className="mb-[30px] flex justify-center">
@@ -68,7 +68,7 @@ export function ProblemContext() {
 
             {/* Main Title */}
             <div className="max-w-[1920px] text-center mb-[30px]">
-                <h2 className="text-[32px] md:text-[40px] leading-[1.2] text-white">
+                <h2 className="text-[24px] md:text-[40px] leading-[1.2] text-white">
                     <span className="text-brand-lime font-bold">Vício de linguagem</span> é um problema que acompanha a maior parte dos brasileiros.
                 </h2>
             </div>
@@ -87,7 +87,7 @@ export function ProblemContext() {
 
             {/* Ending Phrase */}
             <div className="text-center mb-[30px]">
-                <h3 className="text-[28px] md:text-[28px] font-bold text-white">
+                <h3 className="text-[16px] md:text-[28px] font-bold text-white uppercase tracking-[0.2em]">
                     a mensagem perde força.
                 </h3>
             </div>

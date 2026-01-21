@@ -35,16 +35,16 @@ const PriceLogo = () => (
 
 export function PriceSection() {
     return (
-        <section id="preco" className="relative w-full bg-black py-10 md:py-20 px-6 xl:px-[120px] flex flex-col items-center justify-center overflow-hidden">
+        <section id="preco" className="relative w-full bg-black py-10 md:py-20 px-[15px] xl:px-[120px] flex flex-col items-center justify-center overflow-hidden">
             {/* Title */}
             <motion.div
-                className="w-full max-w-[1240px] text-center mb-[80px]"
+                className="w-full max-w-[1240px] text-center mb-[40px] md:mb-[80px]"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
             >
-                <h2 className="text-[28px] md:text-[32px] font-sora font-normal text-white text-center leading-[1.2]">
+                <h2 className="text-[24px] md:text-[32px] font-sora font-normal text-white text-center leading-[1.2]">
                     Uma metodologia completa para você conquistar <span className="text-[#DEFF00] font-bold">espaço e respeito</span>
                 </h2>
             </motion.div>
@@ -90,7 +90,7 @@ export function PriceSection() {
                     viewport={{ once: true, amount: 0.3 }}
                     transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
                 >
-                    <div className="w-full md:min-w-[600px] bg-black bg-opacity-40 border border-[#DEFF00] rounded-[45px] px-[40px] py-[40px] md:px-[60px] md:py-[40px] flex flex-col items-center relative gap-[40px]"
+                    <div className="w-full md:min-w-[600px] bg-black bg-opacity-40 border border-[#DEFF00] rounded-[24px] md:rounded-[45px] px-[15px] py-[40px] md:px-[60px] md:py-[40px] flex flex-col items-center relative gap-[40px]"
                         style={{ background: 'rgba(222, 255, 0, 0.08)' }}
                     >
                         {/* Logo */}

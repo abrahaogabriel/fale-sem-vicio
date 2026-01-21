@@ -17,11 +17,11 @@ import { CircuitLine } from "../ui/CircuitLine";
 
 export function LearningSection() {
     return (
-        <section className="relative w-full bg-black py-10 md:py-20 px-6 md:px-[60px] lg:px-[120px] flex flex-col items-center overflow-hidden">
+        <section className="relative w-full bg-black py-10 md:py-20 px-[15px] md:px-[60px] lg:px-[120px] flex flex-col items-center overflow-hidden">
 
             {/* Header */}
             <div className="w-full flex flex-col items-center gap-4 mb-20 relative z-10">
-                <h2 className="text-[32px] md:text-[40px] leading-[1.2] text-center font-sora">
+                <h2 className="text-[24px] md:text-[40px] leading-[1.2] text-center font-sora">
                     <span className="text-white font-normal">O que você vai aprender com o </span>
                     <span className="text-brand-lime font-bold">Fale Sem Vício</span>
                 </h2>

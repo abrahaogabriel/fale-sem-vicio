@@ -56,7 +56,7 @@ export function FAQSection() {
     };
 
     return (
-        <section className="relative w-full bg-black py-20 px-6 xl:px-[120px] flex flex-col items-center overflow-hidden">
+        <section className="relative w-full bg-black py-10 md:py-20 px-[15px] xl:px-[120px] flex flex-col items-center overflow-hidden">
 
             {/* Header Image */}
             <div className="mb-[60px] w-full max-w-[1240px] flex justify-center">
@@ -71,7 +71,7 @@ export function FAQSection() {
                             onClick={() => toggleAccordion(index)}
                             className="w-full py-9 px-4 md:px-10 flex items-center justify-between gap-4 bg-transparent cursor-pointer group text-left transition-colors"
                         >
-                            <span className="font-sora text-[18px] md:text-[28px] text-white leading-normal">
+                            <span className="font-sora text-[24px] md:text-[28px] text-white leading-normal">
                                 {item.question}
                             </span>
                             <div className="shrink-0">

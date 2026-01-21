@@ -6,7 +6,7 @@ import imgThiago from "../../assets/thiago.png";
 
 export function TestimonialsSection() {
     return (
-        <section className="relative w-full bg-black py-10 md:py-20 px-6 flex flex-col items-center justify-center overflow-hidden">
+        <section className="relative w-full bg-black py-10 md:py-20 px-[15px] flex flex-col items-center justify-center overflow-hidden">
             {/* Title */}
             <div className="w-full max-w-[900px] mb-[60px] text-center relative z-10">
                 <h2 className="text-[24px] md:text-[40px] leading-[1.2] font-helvetica font-bold text-center">

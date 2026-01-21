@@ -24,7 +24,7 @@ const cards = [
 
 export function VicesImpact() {
     return (
-        <section className="relative w-full bg-[#3D3D3D] py-[80px] px-6 md:px-[120px] flex flex-col items-center overflow-hidden">
+        <section className="relative w-full bg-[#3D3D3D] py-10 md:py-[80px] px-[15px] md:px-[120px] flex flex-col items-center overflow-hidden">
             {/* Background Gradient Detail (Optional but premium) */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-brand-lime/20 to-transparent" />
 
@@ -34,7 +34,7 @@ export function VicesImpact() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="text-[32px] md:text-[40px] leading-[1.2] text-center mb-6 max-w-[1244px] font-sora"
+                className="text-[24px] md:text-[40px] leading-[1.2] text-center mb-6 max-w-[1244px] font-sora"
             >
                 <span className="text-brand-lime font-bold">Vícios de linguagem </span>
                 <span className="text-white font-normal">te prejudicam mais do que você imagina</span>
