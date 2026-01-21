@@ -58,6 +58,6 @@
   }
 
   .btn-primary {
-    @apply bg-brand-lime border border-brand-lime rounded-[8px] px-12 py-4 text-brand-dark text-[20px] font-medium transition-all hover:bg-transparent hover:text-brand-lime flex items-center gap-3.5;
+    @apply bg-brand-lime border border-brand-lime rounded-[8px] px-12 py-4 text-[#1E1E1E] text-[20px] font-medium transition-all hover:bg-black/20 hover:text-brand-lime flex items-center gap-3.5;
   }
 }
