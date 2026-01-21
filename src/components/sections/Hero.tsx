@@ -1,4 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
+import TextType from "../ui/TextType";
 import BlurText from "../ui/BlurText";
 
 // Assets (Local now)
@@ -14,10 +15,12 @@ export function Hero() {
 
     // Parallax Offsets: Values adjusted for more noticeable depth.
     const yBg = useTransform(scrollY, [0, 800], [0, 300]);
+    const yTextType = useTransform(scrollY, [0, 800], [0, 180]);
     const yGiovanni = useTransform(scrollY, [0, 800], [0, 100]);
     const yForeground = useTransform(scrollY, [0, 800], [0, -50]); // Moving slightly up for more contrast
 
     // Fade-to-Black and Opacity effects for background layers
+    const opacityTextType = useTransform(scrollY, [0, 500], [0.8, 0]);
     const brightnessBg = useTransform(scrollY, [0, 500], ["brightness(1)", "brightness(0)"]);
     const opacityBg = useTransform(scrollY, [0, 600], [1, 0]);
 
@@ -46,6 +49,28 @@ export function Hero() {
                 />
             </motion.div>
 
+            {/* --- LAYER 2: LARGE BEBAS NEUE OUTLINE ANIMATED TEXT (Desktop Only) --- */}
+            <motion.div
+                style={{ y: yTextType, opacity: opacityTextType }}
+                className="absolute inset-0 z-10 hidden md:flex items-center justify-center pointer-events-none select-none overflow-hidden pb-[15vh]"
+            >
+                <TextType
+                    text={["ÉÉÉÉÉÉÉÉ!", "ENTÃÃOOOO...", "TIPO... TIPO...", "MAS... MAS...", "ÉÉÉÉ... QUE", "ENTÃO..."]}
+                    as="h2"
+                    pauseDuration={2000}
+                    deletingSpeed={45}
+                    cursorBlinkDuration={1}
+                    showCursor={false}
+                    cursorCharacter="|"
+                    cursorClassName="font-sans text-white/50"
+                    className="font-bebas text-[max(20vw,200px)] leading-none text-center whitespace-nowrap"
+                    style={{
+                        WebkitTextStroke: '2px #FFFFFF',
+                        WebkitTextFillColor: 'transparent',
+                        opacity: 0.8
+                    }}
+                />
+            </motion.div>
 
             {/* --- LAYER 3: SPECIALIST & SMOKE EFFECTS --- */}
             <motion.div
