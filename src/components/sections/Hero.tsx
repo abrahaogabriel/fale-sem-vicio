@@ -3,12 +3,12 @@ import TextType from "../ui/TextType";
 import BlurText from "../ui/BlurText";
 
 // Assets (Local now)
-const imgBgMain = "/assets/bg-main.png";
-const imgGiovanni = "/assets/giovanni.png";
-const imgSmoke = "/assets/smoke.png";
-const imgSmokeMask = "/assets/smoke-mask.png";
-const imgLogoPng = "/logo-fale.png";
-const imgArrow = "/assets/arrow.svg";
+const imgBgMain = "assets/bg-main.png";
+const imgGiovanni = "assets/giovanni.png";
+const imgSmoke = "assets/smoke.png";
+const imgSmokeMask = "assets/smoke-mask.png";
+const imgLogoPng = "logo-fale.png";
+const imgArrow = "assets/arrow.svg";
 
 export function Hero() {
     const { scrollY } = useScroll();

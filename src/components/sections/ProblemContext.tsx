@@ -1,8 +1,8 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
-const imgIconLogo = "/assets/icon-logo.svg";
-const imgArrow = "/assets/arrow.svg";
+const imgIconLogo = "assets/icon-logo.svg";
+const imgArrow = "assets/arrow.svg";
 
 const VICES = ["ÉÉÉÉÉÉ!", "ENTÃÃOOOO...", "ÉÉ... QUE, ENTÃO...", "TIPO... TIPO...", "MAS... MAS..."];
 

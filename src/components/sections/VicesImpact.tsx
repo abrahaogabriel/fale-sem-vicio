@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 
-const imgEye = "/assets/icon-eye-slash.svg";
-const imgShield = "/assets/icon-shield-slash.svg";
-const imgStar = "/assets/icon-star-slash.svg";
+const imgEye = "assets/icon-eye-slash.svg";
+const imgShield = "assets/icon-shield-slash.svg";
+const imgStar = "assets/icon-star-slash.svg";
 
 const cards = [
     {
