@@ -30,13 +30,6 @@ export function Hero() {
                     className="w-full h-full object-cover object-right md:object-center"
                     fetchPriority="high"
                 />
-                {/* Gradient overlay for better text readability */}
-                <div
-                    className="absolute inset-0"
-                    style={{
-                        background: 'linear-gradient(90deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 100%)'
-                    }}
-                />
             </motion.div>
 
             {/* --- CONTENT CONTAINER --- */}
@@ -45,7 +38,7 @@ export function Hero() {
                 className="relative z-10 flex flex-col h-full min-h-screen px-[15px] md:px-[120px] py-[40px] md:py-[60px]"
             >
                 {/* --- LOGO --- */}
-                <div className="mb-auto">
+                <div className="mb-auto w-full flex justify-center md:justify-start">
                     <img
                         src={imgLogoPng}
                         alt="Fale Sem Vício"
@@ -53,8 +46,8 @@ export function Hero() {
                     />
                 </div>
 
-                {/* --- MAIN CONTENT (Left aligned) --- */}
-                <div className="flex flex-col items-start max-w-[700px] mb-auto mt-8 md:mt-0">
+                {/* --- MAIN CONTENT (Centered on mobile, left-aligned on desktop) --- */}
+                <div className="flex flex-col items-center md:items-start text-center md:text-left max-w-[700px] mb-auto mt-8 md:mt-0 w-full">
 
                     {/* H1 - Line 1 */}
                     <motion.p
@@ -71,7 +64,7 @@ export function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4, duration: 0.6 }}
-                        className="h-[80px] md:h-[140px] overflow-hidden mb-2 flex items-center"
+                        className="h-[80px] md:h-[140px] overflow-hidden mb-2 flex items-center justify-center md:justify-start w-full"
                     >
                         <TextType
                             text={["ÉÉÉÉ...", "ENTÃÃO...", "TIPO...", "MAS...", "ENTÃO..."]}
@@ -101,7 +94,7 @@ export function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.8, duration: 0.6 }}
-                        className="font-figtree font-normal text-[18px] md:text-[28px] text-white leading-[1.4] tracking-[1.15px] mb-8 md:mb-10 max-w-[600px]"
+                        className="font-figtree font-normal text-[18px] md:text-[28px] text-white leading-[1.4] tracking-[1.15px] mb-8 md:mb-10 max-w-full md:max-w-[700px]"
                     >
                         Elimine os <span className="font-semibold text-brand-lime">vícios de linguagem</span> que atrapalham sua comunicação e te geram falta de confiança.
                     </motion.p>
