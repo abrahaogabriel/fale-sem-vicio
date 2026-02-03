@@ -45,15 +45,21 @@ export function Hero() {
                     className="absolute inset-x-0 top-0 h-[30vh] md:h-[20vh] z-10"
                     style={{ background: 'linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%)' }}
                 />
+
+                {/* Bottom Gradient Overlay (Mobile focus) */}
+                <div
+                    className="absolute inset-x-0 bottom-0 h-[50vh] md:hidden z-10"
+                    style={{ background: 'linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%)' }}
+                />
             </motion.div>
 
             {/* --- CONTENT CONTAINER --- */}
             <motion.div
                 style={{ y: yContent }}
-                className="relative z-10 flex flex-col h-full min-h-screen px-[20px] md:px-[120px] py-[50px] md:py-[60px]"
+                className="relative z-10 flex flex-col h-full min-h-screen px-[20px] md:px-[120px] py-[40px] md:py-[60px]"
             >
-                {/* --- LOGO --- */}
-                <div className="mb-auto w-full flex justify-center md:justify-start">
+                {/* --- LOGO (Top) --- */}
+                <div className="w-full flex justify-center md:justify-start">
                     <img
                         src={imgLogoPng}
                         alt="Fale Sem Vício"
@@ -62,7 +68,8 @@ export function Hero() {
                 </div>
 
                 {/* --- MAIN CONTENT (Centered on mobile, left-aligned on desktop) --- */}
-                <div className="flex flex-col items-center md:items-start text-center md:text-left max-w-[700px] mb-auto mt-[10vh] md:mt-0 w-full">
+                {/* On mobile, we push this to the bottom using margin-top auto */}
+                <div className="flex flex-col items-center md:items-start text-center md:text-left max-w-[700px] mt-auto md:mt-0 w-full pb-[10vh] md:pb-0">
 
                     {/* H1 - Line 1 */}
                     <motion.p
