@@ -107,7 +107,7 @@ export function PriceSection() {
                         </div>
 
                         {/* CTA Button */}
-                        <a href="#preco" className="btn-primary flex items-center gap-4 group px-12 mt-4 cursor-pointer justify-center">
+                        <a href="https://pay.hub.la/DMMuAf1s8viuWmQd1I1P" target="_blank" rel="noopener noreferrer" className="btn-primary flex items-center gap-4 group px-12 mt-4 cursor-pointer justify-center">
                             <span className="uppercase tracking-wide font-medium text-[14px] md:text-[20px] whitespace-nowrap">Quero falar sem vício</span>
                             <div className="shrink-0 transition-transform group-hover:translate-x-1 flex items-center">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">

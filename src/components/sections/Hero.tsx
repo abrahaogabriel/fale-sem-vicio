@@ -115,7 +115,7 @@ export function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.8, duration: 0.6 }}
-                        className="font-figtree font-normal text-[14px] md:text-[28px] text-white leading-[1.6] tracking-[1.15px] mb-8 md:mb-10 max-w-full md:max-w-[700px] px-4 md:px-0"
+                        className="font-figtree font-normal text-[14px] md:text-[28px] text-white leading-[1.6] tracking-[1.15px] mb-8 md:mb-10 max-w-full md:max-w-[700px] px-2 md:px-0"
                     >
                         Elimine os <span className="font-semibold text-brand-lime">vícios de linguagem</span> que atrapalham sua comunicação e te geram falta de confiança.
                     </motion.p>
@@ -126,10 +126,7 @@ export function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 1, duration: 0.6 }}
                     >
-                        <a
-                            href="#preco"
-                            className="inline-flex items-center gap-[12px] md:gap-[14px] border border-brand-lime rounded-[8px] px-[32px] md:px-[48px] py-[14px] md:py-[16px] group transition-all duration-300 hover:bg-brand-lime/10"
-                        >
+                        <a href="#preco" className="inline-flex items-center gap-[12px] md:gap-[14px] border border-brand-lime rounded-[8px] px-[32px] md:px-[48px] py-[14px] md:py-[16px] group transition-all duration-300 hover:bg-brand-lime/10">
                             <span className="font-sora font-medium text-[14px] md:text-[20px] text-brand-lime uppercase tracking-wide">
                                 Quero falar sem vício
                             </span>

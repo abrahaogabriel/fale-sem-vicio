@@ -185,9 +185,6 @@ const TextType = ({
                 ref={cursorRef}
                 className={`absolute ml-1 opacity-100 ${shouldHideCursor ? 'hidden' : ''} ${cursorClassName}`}
                 style={{
-                    WebkitTextFillColor: 'white',
-                    WebkitTextStroke: '0px transparent',
-                    color: 'white',
                     left: '100%',
                     top: 0
                 }}
