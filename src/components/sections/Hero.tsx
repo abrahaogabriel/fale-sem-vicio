@@ -3,6 +3,7 @@ import TextType from "../ui/TextType";
 
 // Assets
 const imgBgHero = "assets/bg-hero-new.png";
+const imgBgHeroMobile = "assets/bg-hero-mobile.png";
 const imgLogoPng = "logo-fale.png";
 const imgArrow = "assets/arrow.svg";
 
@@ -24,37 +25,51 @@ export function Hero() {
                 style={{ y: yBg, opacity: opacityBg }}
                 className="absolute inset-0 z-0 pointer-events-none"
             >
+                {/* Desktop Background */}
                 <img
                     src={imgBgHero}
-                    alt="Background"
-                    className="w-full h-full object-cover object-right md:object-center"
+                    alt="Background Desktop"
+                    className="hidden md:block w-full h-full object-cover object-center"
                     fetchPriority="high"
+                />
+                {/* Mobile Background */}
+                <img
+                    src={imgBgHeroMobile}
+                    alt="Background Mobile"
+                    className="block md:hidden w-full h-full object-cover object-top"
+                    fetchPriority="high"
+                />
+
+                {/* Top Gradient Overlay (Mobile focus) */}
+                <div
+                    className="absolute inset-x-0 top-0 h-[30vh] md:h-[20vh] z-10"
+                    style={{ background: 'linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%)' }}
                 />
             </motion.div>
 
             {/* --- CONTENT CONTAINER --- */}
             <motion.div
                 style={{ y: yContent }}
-                className="relative z-10 flex flex-col h-full min-h-screen px-[15px] md:px-[120px] py-[40px] md:py-[60px]"
+                className="relative z-10 flex flex-col h-full min-h-screen px-[20px] md:px-[120px] py-[50px] md:py-[60px]"
             >
                 {/* --- LOGO --- */}
                 <div className="mb-auto w-full flex justify-center md:justify-start">
                     <img
                         src={imgLogoPng}
                         alt="Fale Sem Vício"
-                        className="w-[180px] md:w-[225px] h-auto"
+                        className="w-[200px] md:w-[225px] h-auto"
                     />
                 </div>
 
                 {/* --- MAIN CONTENT (Centered on mobile, left-aligned on desktop) --- */}
-                <div className="flex flex-col items-center md:items-start text-center md:text-left max-w-[700px] mb-auto mt-8 md:mt-0 w-full">
+                <div className="flex flex-col items-center md:items-start text-center md:text-left max-w-[700px] mb-auto mt-[10vh] md:mt-0 w-full">
 
                     {/* H1 - Line 1 */}
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2, duration: 0.6 }}
-                        className="font-sora font-bold text-[28px] md:text-[40px] text-brand-lime leading-[1.1] mb-2"
+                        className="font-sora font-bold text-[18px] md:text-[40px] text-brand-lime leading-[1.1] mb-2 uppercase"
                     >
                         PARE DE VEZ COM OS
                     </motion.p>
@@ -64,7 +79,7 @@ export function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4, duration: 0.6 }}
-                        className="h-[80px] md:h-[140px] overflow-hidden mb-2 flex items-center justify-center md:justify-start w-full"
+                        className="h-[70px] md:h-[140px] overflow-hidden mb-2 flex items-center justify-center md:justify-start w-full"
                     >
                         <TextType
                             text={["ÉÉÉÉ...", "ENTÃÃO...", "TIPO...", "MAS...", "ENTÃO..."]}
@@ -75,7 +90,7 @@ export function Hero() {
                             showCursor={true}
                             cursorCharacter="|"
                             cursorClassName="text-brand-lime"
-                            className="font-['SF_Pro_Display',system-ui,sans-serif] font-bold text-[60px] md:text-[120px] text-brand-lime leading-none"
+                            className="font-['SF_Pro_Display',system-ui,sans-serif] font-bold text-[60px] md:text-[120px] text-brand-lime leading-none uppercase"
                         />
                     </motion.div>
 
@@ -84,7 +99,7 @@ export function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.6, duration: 0.6 }}
-                        className="font-sora font-bold text-[28px] md:text-[40px] text-white leading-[1.1] mb-6 md:mb-8"
+                        className="font-sora font-bold text-[18px] md:text-[40px] text-white leading-[1.1] mb-6 md:mb-8 uppercase"
                     >
                         QUE ENFRAQUECEM SUA FALA
                     </motion.p>
@@ -94,7 +109,7 @@ export function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.8, duration: 0.6 }}
-                        className="font-figtree font-normal text-[18px] md:text-[28px] text-white leading-[1.4] tracking-[1.15px] mb-8 md:mb-10 max-w-full md:max-w-[700px]"
+                        className="font-figtree font-normal text-[14px] md:text-[28px] text-white leading-[1.6] tracking-[1.15px] mb-8 md:mb-10 max-w-full md:max-w-[700px] px-4 md:px-0"
                     >
                         Elimine os <span className="font-semibold text-brand-lime">vícios de linguagem</span> que atrapalham sua comunicação e te geram falta de confiança.
                     </motion.p>
@@ -107,12 +122,12 @@ export function Hero() {
                     >
                         <a
                             href="#preco"
-                            className="inline-flex items-center gap-[14px] border border-brand-lime rounded-[8px] px-[24px] md:px-[48px] py-[16px] group transition-all duration-300 hover:bg-brand-lime/10"
+                            className="inline-flex items-center gap-[12px] md:gap-[14px] border border-brand-lime rounded-[8px] px-[32px] md:px-[48px] py-[14px] md:py-[16px] group transition-all duration-300 hover:bg-brand-lime/10"
                         >
-                            <span className="font-sora font-medium text-[16px] md:text-[20px] text-brand-lime uppercase tracking-wide">
+                            <span className="font-sora font-medium text-[14px] md:text-[20px] text-brand-lime uppercase tracking-wide">
                                 Quero falar sem vício
                             </span>
-                            <div className="w-[16px] h-[16px] flex items-center justify-center shrink-0">
+                            <div className="w-[14px] md:w-[16px] h-[14px] md:h-[16px] flex items-center justify-center shrink-0">
                                 <img
                                     src={imgArrow}
                                     alt="Arrow"
