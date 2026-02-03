@@ -59,7 +59,7 @@ export function Hero() {
                 className="relative z-10 flex flex-col h-full min-h-screen px-[20px] md:px-[120px] pt-[40px] md:py-[60px]"
             >
                 {/* --- LOGO (Top) --- */}
-                <div className="flex-none w-full flex justify-center md:justify-start">
+                <div className="w-full flex justify-center md:justify-start">
                     <img
                         src={imgLogoPng}
                         alt="Fale Sem Vício"
@@ -67,11 +67,8 @@ export function Hero() {
                     />
                 </div>
 
-                {/* --- SPACER (Mobile only) --- */}
-                <div className="flex-grow md:hidden" />
-
-                {/* --- MAIN CONTENT (Bottom anchored) --- */}
-                <div className="flex-none flex flex-col items-center md:items-start text-center md:text-left max-w-[700px] w-full pb-[40px] md:pb-0 md:mt-0">
+                {/* --- MAIN CONTENT (Centered on Desktop, Bottom-anchored on Mobile) --- */}
+                <div className="flex flex-col items-center md:items-start text-center md:text-left max-w-[700px] w-full mt-auto md:my-auto pb-[40px] md:pb-0">
 
                     {/* H1 - Line 1 */}
                     <motion.p
