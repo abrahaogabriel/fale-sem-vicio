@@ -87,7 +87,7 @@ export function VicesImpact() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 1, delay: 1, ease: "easeOut" }}
-                className="text-white text-[22px] md:text-[32px] text-center max-w-[1100px] font-sora leading-tight"
+                className="text-white text-[22px] md:text-[32px] text-center font-sora leading-tight md:whitespace-nowrap"
             >
                 Falar sem vício vai transformar sua <span className="text-brand-lime font-bold italic">comunicação, influência e autoridade.</span>
             </motion.p>
