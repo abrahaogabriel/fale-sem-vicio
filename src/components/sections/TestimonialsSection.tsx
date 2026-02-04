@@ -1,17 +1,16 @@
 import { TestimonialCard } from "../ui/TestimonialCard";
-import imgAllan from "../../assets/allan.png";
-import imgCarlos from "../../assets/carlos.png";
-import imgSara from "../../assets/sara.png";
-import imgThiago from "../../assets/thiago.png";
+import imgGregory from "../../assets/testimonial-gregory.png";
+import imgPriscila from "../../assets/testimonial-priscila.png";
+import imgAndre from "../../assets/testimonial-andre.png";
+import imgCleitton from "../../assets/testimonial-cleitton.png";
 
 export function TestimonialsSection() {
     return (
         <section className="relative w-full bg-black py-10 md:py-20 px-[15px] flex flex-col items-center justify-center overflow-hidden">
             {/* Title */}
             <div className="w-full max-w-[900px] mb-[60px] text-center relative z-10">
-                <h2 className="text-[24px] md:text-[40px] leading-[1.2] font-helvetica font-bold text-center">
-                    <span className="text-white font-normal block md:inline">Depoimentos de quem fez o curso agora fala </span>
-                    <span className="text-[#DEFF00]">Sem Vícios de linguagem</span>
+                <h2 className="text-[24px] md:text-[40px] leading-[1.2] font-helvetica font-bold text-center text-white">
+                    Veja o que estão falando sobre o <span className="text-[#DEFF00]">Fale sem vício</span>
                 </h2>
             </div>
 
@@ -19,52 +18,52 @@ export function TestimonialsSection() {
             <div className="w-full max-w-[1800px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 md:gap-[20px] justify-items-center">
                 {/* Card 1 */}
                 <TestimonialCard
-                    name="Allan Ferreira"
-                    role="Professor"
-                    initials="AF"
-                    imageSrc={imgAllan}
+                    name="Gregory Couto"
+                    role="Estrategista - Marketing Digital"
+                    initials="GC"
+                    imageSrc={imgGregory}
                     description={
                         <>
-                            O meu objetivo principal nesse curso foi <span className="bg-[#DEFF00]/25 text-white px-1">simplesmente melhorar minha dicção</span>, porque <span className="bg-[#DEFF00]/25 text-white px-1">eu sempre falava muito rápido</span>, comia as palavras e sempre me incomodou quando as pessoas pediam para eu repetir, falar novamente.
+                            Eu tinha alguns bloqueios com minha comunicação e com minha dicção, principalmente em minha maneira de falar com vícios de linguagem! <span className="bg-[#DEFF00]/25 text-white px-1">Graças ao curso, eu consegui melhorar muito minha comunicação, e hoje tenho minha própria mentoria de marketing</span> e estou atingindo os resultados que eu tanto esperava!
                         </>
                     }
                 />
 
                 {/* Card 2 */}
                 <TestimonialCard
-                    name="Carlos Souza"
-                    role="Telemarketing"
-                    initials="CS"
-                    imageSrc={imgCarlos}
+                    name="Priscila Núbia"
+                    role="Supervisora Comercial"
+                    initials="PN"
+                    imageSrc={imgPriscila}
                     description={
                         <>
-                            E eu digo para vocês que a grande transformação que aconteceu na minha vida foi <span className="bg-[#DEFF00]/25 text-white px-1">que eu me tornei uma pessoa mais autoconfiante, mais interessante</span> e que as pessoas buscam por conversar comigo.
+                            Eu tinha muitas dificuldades em minha fala como clareza, dicação, falava muitos gerúndios e tinha muitos vícios de linguagem. Por causa disso, passei situações extremamente desconfortáveis e frustrantes ao longo de minha carreira. <span className="bg-[#DEFF00]/25 text-white px-1">Após o curso, eu transformei minha comunicação e minha vida profissional, fui promovida em meu trabalho</span> e atingi um cargo de liderança.
                         </>
                     }
                 />
 
                 {/* Card 3 */}
                 <TestimonialCard
-                    name="Sara Menezes"
-                    role="Head de operações"
-                    initials="SM"
-                    imageSrc={imgSara}
+                    name="André Mello"
+                    role="Coprodutor - Marketing Digital"
+                    initials="AM"
+                    imageSrc={imgAndre}
                     description={
                         <>
-                            Então, realmente isso foi <span className="bg-[#DEFF00]/25 text-white px-1">uma transformação</span> muito grande, não apenas na minha carreira, mas também na <span className="bg-[#DEFF00]/25 text-white px-1">minha vida profissional</span>.
+                            Entrei para o curso para <span className="bg-[#DEFF00]/25 text-white px-1">eliminar meus vícios de linguagem e conseguir me comunicar de maneira clara com as pessoas, dando impacto em minha fala</span>, sem ter prolixidade que era uma das minhas maiores dificuldades. O valor do investimento no curso foi irrisório, pois o conteúdo é absurdo, e hoje falar em público se tornou uma das minhas maiores tranquilidades.
                         </>
                     }
                 />
 
                 {/* Card 4 */}
                 <TestimonialCard
-                    name="Thiago Tuller"
-                    role="Relações Públicas"
-                    initials="TT"
-                    imageSrc={imgThiago}
+                    name="Cleitton Macêdo"
+                    role="Apresentador"
+                    initials="CM"
+                    imageSrc={imgCleitton}
                     description={
                         <>
-                            E eu achava que eu <span className="bg-[#DEFF00]/25 text-white px-1">não tinha como mudar isso.</span> Até que um dia eu ouvi e <span className="bg-[#DEFF00]/25 text-white px-1">conheci o Giovanni por meio de um podcast.</span>
+                            Quando eu ia falar, sentia as palavras presas na garganta, e não conseguia sentir confiança em mim mesmo para ser um grande orador. <span className="bg-[#DEFF00]/25 text-white px-1">Consegui melhorar minha dicção, minha presença, minha persuasão, e como a comunicação faz parte da minha profissão, eu transformei minha carreira</span> não só na TV, mas até mesmo nas redes sociais.
                         </>
                     }
                 />

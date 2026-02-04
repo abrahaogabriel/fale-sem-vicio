@@ -97,13 +97,17 @@ export function PriceSection() {
                         <PriceLogo />
 
                         {/* Price Info */}
-                        <div className="flex flex-col items-center gap-8">
-                            <span className="text-[#808080] font-sora text-[20px] opacity-60">Por apenas 12x de</span>
+                        <div className="flex flex-col items-center gap-4">
+                            <div className="flex flex-col items-center">
+                                <span className="text-white/50 font-sora text-[18px] md:text-[22px] line-through">De R$ 497,00</span>
+                                <span className="text-white font-sora text-[20px] md:text-[24px]">por apenas 12x de</span>
+                            </div>
+
                             {/* Huge Price Font */}
-                            <div className="text-[#DEFF00] font-helvetica font-bold text-[56px] md:text-[80px] lg:text-[110px] leading-[0.9] tracking-tighter -my-2 whitespace-nowrap">
+                            <div className="text-[#5AF43B] font-helvetica font-bold text-[56px] md:text-[80px] lg:text-[110px] leading-[0.9] tracking-tighter -my-2 whitespace-nowrap">
                                 R$ 10,18
                             </div>
-                            <span className="text-[#808080] font-sora text-[20px] opacity-60">Ou apenas R$97,00 à vista</span>
+                            <span className="text-white font-sora text-[20px] md:text-[24px]">Ou R$ 97,00 à vista</span>
                         </div>
 
                         {/* CTA Button */}

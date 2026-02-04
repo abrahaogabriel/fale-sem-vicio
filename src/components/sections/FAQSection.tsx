@@ -4,32 +4,32 @@ import imgFaqHeader from "../../assets/faq_header.png";
 
 const FAQ_ITEMS = [
     {
-        question: "Onde irei receber o acesso do treinamento?",
-        answer: "Sim, tantos as aulas teóricas como os encontros AO VIVO ficaram gravados na plataforma." // Recovered from Figma inspection
+        question: "E se eu não tiver tempo para fazer o curso?",
+        answer: "O curso foi desenhado para ser prático e direto. Você consegue assistir as aulas até mesmo no seu tempo de deslocamento ou intervalo."
     },
     {
-        question: "Por quanto tempo terei acesso às aulas?",
-        answer: "Você terá acesso vitalício ao conteúdo do curso, podendo assistir quando e quantas vezes quiser."
+        question: "Quanto custa esse curso?",
+        answer: "O Fale Sem Vício custa apenas 12x de R$ 10,18 ou R$ 97,00 à vista."
     },
     {
-        question: "Quantos dias de garantia tenho do treinamento?",
-        answer: "Você tem 7 dias de garantia incondicional. Se não gostar do conteúdo, devolvemos 100% do seu dinheiro."
+        question: "Este curso é pra quem?",
+        answer: "Qualquer pessoa que queira falar melhor, ser ouvida e passar mais autoridade."
     },
     {
-        question: "Para quem é o curso?",
-        answer: "O curso é para qualquer pessoa que deseja melhorar sua comunicação, seja para fins profissionais ou pessoais, e eliminar vícios de linguagem."
+        question: "E se eu não gostar?",
+        answer: "Você tem uma garantia incondicional de 7 dias."
     },
     {
-        question: "Esse curso é para quem já fala bem?",
-        answer: "Sim! Mesmo quem já se comunica bem pode refinar sua técnica, eliminar pequenos vícios insconscientes e ter mais impacto e presença."
+        question: "Como receberei o acesso?",
+        answer: "Assim que o seu pagamento for aprovado, os dados de acesso chegarão diretamente no seu e-mail."
     },
     {
-        question: "Preciso decorar frases ou mudar meu jeito de falar?",
-        answer: "Não. O método ensina você a ser autêntico e natural, corrigindo apenas o que atrapalha sua mensagem, sem criar um personagem."
+        question: "Qual o contato do suporte?",
+        answer: "O e-mail para suporte é: suporte@giovannibegossi.com"
     },
     {
-        question: "Em quanto tempo começo a perceber diferença na minha fala?",
-        answer: "Muitos alunos relatam diferença logo nas primeiras aulas, ao aplicarem as técnicas de consciência e pausa."
+        question: "Por quanto tempo terei acesso?",
+        answer: "Você terá acesso por 1 ano para assistir quantas vezes quiser!"
     }
 ];
 

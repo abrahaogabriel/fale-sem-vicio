@@ -3,7 +3,7 @@ import BlurText from "../ui/BlurText";
 
 const imgCard1 = "assets/bg-card-reunioes.png";
 const imgCard2 = "assets/bg-card-apresentacoes.png";
-const imgCard3 = "assets/bg-card-conversas.png";
+const imgCard3 = "assets/box3-actor.png";
 const imgCard4 = "assets/bg-card-videos.png";
 const imgCard5 = "assets/bg-card-whatsapp.png";
 const imgArrow = "assets/arrow.svg";
@@ -101,15 +101,8 @@ export function ProblematicMoments() {
                 transition={{ delay: 1, duration: 0.5 }}
                 className="w-full flex justify-center"
             >
-                <a href="#preco" className="btn-outline flex items-center gap-4 group px-6 md:px-12 w-full md:w-auto justify-center">
+                <a href="#preco" className="btn-primary px-6 md:px-12 w-full md:w-auto justify-center">
                     <span className="uppercase tracking-wide font-medium text-[14px] md:text-[20px] text-center">Quero corrigir esses problemas</span>
-                    <div className="w-[18px] h-[18px] flex items-center justify-center shrink-0">
-                        <img
-                            src={imgArrow}
-                            alt="Arrow"
-                            className="w-full h-full transition-transform group-hover:translate-x-1"
-                        />
-                    </div>
                 </a>
             </motion.div>
 

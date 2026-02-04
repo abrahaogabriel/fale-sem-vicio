@@ -8,7 +8,7 @@ const cards = [
     {
         icon: imgEye,
         text: "Menos ",
-        highlight: "atenção;",
+        highlight: "atenção",
     },
     {
         icon: imgShield,
@@ -48,7 +48,7 @@ export function VicesImpact() {
                 transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                 className="text-white text-lg md:text-[22px] text-center mb-16 font-sora"
             >
-                Quem te escuta sente insegurança, tudo isso gera:
+                Quem te escuta sente insegurança e tudo isso gera:
             </motion.p>
 
             {/* Cards Grid */}
@@ -87,9 +87,9 @@ export function VicesImpact() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 1, delay: 1, ease: "easeOut" }}
-                className="text-white text-lg md:text-[22px] text-center max-w-[1000px] font-sora"
+                className="text-white text-[22px] md:text-[32px] text-center max-w-[1100px] font-sora leading-tight"
             >
-                Falar sem vício vai transformar sua <span className="text-brand-lime font-bold">comunicação, confiança e autoridade.</span>
+                Falar sem vício vai transformar sua <span className="text-brand-lime font-bold italic">comunicação, influência e autoridade.</span>
             </motion.p>
         </section>
     );
