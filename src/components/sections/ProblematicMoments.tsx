@@ -6,7 +6,6 @@ const imgCard2 = "assets/bg-card-apresentacoes.png";
 const imgCard3 = "assets/bg-card-conversas.png";
 const imgCard4 = "assets/bg-card-videos.png";
 const imgCard5 = "assets/bg-card-whatsapp.png";
-const imgArrow = "assets/arrow.svg";
 
 interface CardProps {
     bg: string;
