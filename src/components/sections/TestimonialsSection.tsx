@@ -9,10 +9,10 @@ export function TestimonialsSection() {
         <section className="relative w-full bg-black py-10 md:py-20 px-[15px] flex flex-col items-center justify-center overflow-hidden">
             {/* Title */}
             <div className="w-full max-w-[900px] mb-[60px] text-center relative z-10">
-                <h2 className="text-[24px] md:text-[40px] leading-[1.2] font-helvetica font-bold text-center">
-                    <span className="text-white font-normal block md:inline">Depoimentos de quem fez o curso agora fala </span>
-                    <span className="text-[#DEFF00]">Sem Vícios de linguagem</span>
-                </h2>
+                <h1 className="text-[24px] md:text-[40px] leading-[1.2] font-helvetica font-bold text-center">
+                    <span className="text-white font-normal block md:inline">Veja o que estão falando sobre o </span>
+                    <span className="text-[#DEFF00]">Fale sem vício</span>
+                </h1>
             </div>
 
             {/* Cards Grid */}

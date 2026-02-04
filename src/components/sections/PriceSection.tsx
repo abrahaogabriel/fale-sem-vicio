@@ -98,12 +98,16 @@ export function PriceSection() {
 
                         {/* Price Info */}
                         <div className="flex flex-col items-center gap-8">
-                            <span className="text-[#808080] font-sora text-[20px] opacity-60">Por apenas 12x de</span>
+                            <div className="text-center">
+                                <span className="text-[#808080] font-sora text-[16px] opacity-60 line-through">De R$497,00</span>
+                                <br />
+                                <span className="text-white font-sora text-[20px]">por apenas 12x de</span>
+                            </div>
                             {/* Huge Price Font */}
-                            <div className="text-[#DEFF00] font-helvetica font-bold text-[56px] md:text-[80px] lg:text-[110px] leading-[0.9] tracking-tighter -my-2 whitespace-nowrap">
+                            <div className="text-[#00B04F] font-helvetica font-bold text-[56px] md:text-[80px] lg:text-[110px] leading-[0.9] tracking-tighter -my-2 whitespace-nowrap">
                                 R$ 10,18
                             </div>
-                            <span className="text-[#808080] font-sora text-[20px] opacity-60">Ou apenas R$97,00 à vista</span>
+                            <span className="text-white font-sora text-[20px]">ou apenas R$97,00 à vista</span>
                         </div>
 
                         {/* CTA Button */}
@@ -145,7 +149,7 @@ export function PriceSection() {
                 >
                     {[
                         "Metodologia validada",
-                        "6 Módulos com +25 Aulas",
+                        "6 módulos com +25 aulas",
                         "Resultados à partir do 1º dia",
                         "Conteúdo único e exclusivo"
                     ].map((item, index) => (

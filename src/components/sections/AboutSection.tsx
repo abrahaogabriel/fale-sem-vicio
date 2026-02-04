@@ -9,8 +9,8 @@ export function AboutSection() {
                 <div className="flex flex-col gap-[30px] items-start text-white flex-shrink-0 w-full xl:w-[657px] pr-[15px] xl:pr-0">
                     {/* Title */}
                     <div className="font-sora font-medium text-[24px] xl:text-[40px] leading-tight">
-                        <p className="text-[#DEFF00] mb-0">Giovanni Begossi</p>
-                        <p className="text-white">O El Professor da Oratória</p>
+                        <h1 className="text-[#DEFF00] mb-0">Conheça o seu mentor</h1>
+                        <p className="text-white">Giovanni Begossi, o El Professor da Oratória</p>
                     </div>
 
                     {/* Description */}

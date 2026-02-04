@@ -21,10 +21,9 @@ export function LearningSection() {
 
             {/* Header */}
             <div className="w-full flex flex-col items-center gap-4 mb-20 relative z-10">
-                <h2 className="text-[24px] md:text-[40px] leading-[1.2] text-center font-sora">
-                    <span className="text-white font-normal">O que você vai aprender com o </span>
-                    <span className="text-brand-lime font-bold">Fale Sem Vício</span>
-                </h2>
+                <h1 className="text-[24px] md:text-[40px] leading-[1.2] text-center font-sora">
+                    <span className="text-white font-normal">O método infalível para falar conquistar admiração e respeito com sua voz!</span>
+                </h1>
                 <div className="bg-brand-lime/10 border border-brand-lime rounded-[12px] px-[15px] md:px-[30px] py-[15px]">
                     <p className="text-white text-lg md:text-[22px] text-center font-sora">
                         Sem precisar falar de forma robótica, apenas dominando suas próprias falas!
@@ -70,7 +69,7 @@ export function LearningSection() {
                         <div className="relative z-30 w-full">
                             <LearningCard
                                 title="Dicção"
-                                description="Você corrige problemas de articulação que fazem sua fala soar confusa, imprecisa ou difícil de acompanhar, mesmo quando a ideia é simples."
+                                description="Você corrige problemas de articulação que fazem sua fala soar feia, imprecisa ou difícil de acompanhar, mesmo quando a ideia é simples."
                             />
                         </div>
                         <div className="hidden md:block absolute -right-[43px] top-1/2 -translate-y-1/2 z-10 scale-75 lg:scale-100">
@@ -109,7 +108,7 @@ export function LearningSection() {
                         <div className="relative z-30 w-full">
                             <LearningCard
                                 title="Vocabulário"
-                                description="Você ajusta o uso das palavras, evitando jargões, estrangeirismos e termos desnecessários que atrapalham a clareza e afastam quem te escuta."
+                                description="Você aprende a usar a palavra certa, na hora certa, evitando termos desnecessários e se conectando com qualquer pessoa."
                             />
                         </div>
                     </div>

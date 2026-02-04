@@ -77,7 +77,7 @@ export function Hero() {
                         transition={{ delay: 0.2, duration: 0.6 }}
                         className="font-sora font-bold text-[18px] md:text-[40px] text-brand-lime leading-[1.1] mb-2 uppercase"
                     >
-                        PARE DE VEZ COM OS
+                        
                     </motion.p>
 
                     {/* H1 - Line 2 (Animated Component) */}
@@ -117,7 +117,7 @@ export function Hero() {
                         transition={{ delay: 0.8, duration: 0.6 }}
                         className="font-figtree font-normal text-[14px] md:text-[28px] text-white leading-[1.6] tracking-[1.15px] mb-8 md:mb-10 max-w-full md:max-w-[700px] px-2 md:px-0"
                     >
-                        Elimine os <span className="font-semibold text-brand-lime">vícios de linguagem</span> que atrapalham sua comunicação e te geram falta de confiança.
+                        Elimine os vícios de linguagem que atrapalham sua comunicação, melhore sua dicção e nunca mais seja ignorado quando falar!
                     </motion.p>
 
                     {/* CTA Button */}
