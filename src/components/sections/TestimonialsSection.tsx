@@ -19,7 +19,7 @@ export function TestimonialsSection() {
                 {/* Card 1 */}
                 <TestimonialCard
                     name="Gregory Couto"
-                    role="Estrategista - Marketing Digital"
+                    role="Estrategista de Conteúdo"
                     initials="GC"
                     imageSrc={imgGregory}
                     description={
@@ -37,7 +37,7 @@ export function TestimonialsSection() {
                     imageSrc={imgPriscila}
                     description={
                         <>
-                            Eu tinha muitas dificuldades em minha fala como clareza, dicação, falava muitos gerúndios e tinha muitos vícios de linguagem. Por causa disso, passei situações extremamente desconfortáveis e frustrantes ao longo de minha carreira. <span className="bg-[#DEFF00]/25 text-white px-1">Após o curso, eu transformei minha comunicação e minha vida profissional, fui promovida em meu trabalho</span> e atingi um cargo de liderança.
+                            Eu tinha muitas dificuldades em minha fala como clareza, dicção, falava muitos gerúndios e tinha muitos vícios de linguagem. Por causa disso, passei situações extremamente desconfortáveis e frustrantes ao longo de minha carreira. <span className="bg-[#DEFF00]/25 text-white px-1">Após o curso, eu transformei minha comunicação e minha vida profissional, fui promovida em meu trabalho</span> e atingi um cargo de liderança.
                         </>
                     }
                 />
@@ -45,7 +45,7 @@ export function TestimonialsSection() {
                 {/* Card 3 */}
                 <TestimonialCard
                     name="André Mello"
-                    role="Coprodutor - Marketing Digital"
+                    role="Dono de agência"
                     initials="AM"
                     imageSrc={imgAndre}
                     description={

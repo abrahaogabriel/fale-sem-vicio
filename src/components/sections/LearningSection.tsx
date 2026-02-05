@@ -22,11 +22,11 @@ export function LearningSection() {
             {/* Header */}
             <div className="w-full flex flex-col items-center gap-4 mb-20 relative z-10">
                 <h2 className="text-[20px] md:text-[40px] leading-[1.2] text-center font-sora text-white">
-                    O método infalível para <span className="text-brand-lime font-bold">falar conquistar admiração e respeito</span> com sua voz!
+                    O método infalível para <span className="text-brand-lime font-bold">conquistar admiração e respeito</span> com sua voz!
                 </h2>
                 <div className="bg-brand-lime/10 border border-brand-lime rounded-[12px] px-[15px] md:px-[30px] py-[15px]">
                     <p className="text-white text-lg md:text-[22px] text-center font-sora">
-                        Sem precisar falar de forma robótica, apenas dominando suas próprias falas!
+                        Sem precisar falar de forma robótica, apenas agindo com naturalidade
                     </p>
                 </div>
             </div>

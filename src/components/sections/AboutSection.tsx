@@ -11,7 +11,7 @@ export function AboutSection() {
                     <div className="font-sora font-medium text-[24px] xl:text-[40px] leading-tight">
                         <p className="text-white mb-2 opacity-80 text-[18px] xl:text-[24px]">Conheça o seu mentor</p>
                         <p className="text-[#DEFF00] mb-0 font-bold">Giovanni Begossi</p>
-                        <p className="text-white text-[20px] xl:text-[32px]">O El Professor da Oratória</p>
+                        <p className="text-white text-[20px] xl:text-[32px]">"El Professor da Oratória"</p>
                     </div>
 
                     {/* Description */}
