@@ -8,8 +8,8 @@ export function TestimonialsSection() {
     return (
         <section className="relative w-full bg-black py-10 md:py-20 px-[15px] flex flex-col items-center justify-center overflow-hidden">
             {/* Title */}
-            <div className="w-full max-w-[900px] mb-[60px] text-center relative z-10">
-                <h2 className="text-[24px] md:text-[40px] leading-[1.2] font-helvetica font-bold text-center text-white">
+            <div className="w-full max-w-[1240px] mb-[60px] text-center relative z-10">
+                <h2 className="text-[24px] md:text-[40px] leading-[1.2] font-helvetica font-bold text-center text-white md:whitespace-nowrap">
                     Veja o que estão falando sobre o <span className="text-[#DEFF00]">Fale sem vício</span>
                 </h2>
             </div>

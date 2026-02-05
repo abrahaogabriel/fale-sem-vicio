@@ -169,6 +169,12 @@ export function PriceSection() {
                 </motion.div>
 
             </div>
+
+            {/* --- BOTTOM DIVISOR --- */}
+            <div
+                className="absolute bottom-0 left-1/2 -translate-x-1/2 z-20 w-full max-w-[1500px] h-[1px]"
+                style={{ background: 'linear-gradient(90deg, rgba(0,0,0,0) 0%, #DEFF00 50%, rgba(0,0,0,0) 100%)' }}
+            />
         </section>
     );
 }
