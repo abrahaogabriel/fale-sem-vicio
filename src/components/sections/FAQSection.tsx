@@ -5,27 +5,27 @@ import imgFaqHeader from "../../assets/faq_header.png";
 const FAQ_ITEMS = [
     {
         question: "E se eu não tiver tempo para fazer o curso?",
-        answer: "O curso foi desenhado para ser prático e direto. Você consegue assistir as aulas até mesmo no seu tempo de deslocamento ou intervalo."
+        answer: "As aulas são curtas e diretas (10-15 minutos em média). Você consegue assistir no trajeto para o trabalho, no horário de almoço, ou até mesmo antes de dormir."
     },
     {
         question: "Quanto custa esse curso?",
-        answer: "O Fale Sem Vício custa apenas 12x de R$ 10,18 ou R$ 97,00 à vista."
+        answer: "O valor é de 12x R$10,18 ou à vista por R$97,00"
     },
     {
         question: "Este curso é pra quem?",
-        answer: "Qualquer pessoa que queira falar melhor, ser ouvida e passar mais autoridade."
+        answer: "Ele pode ser consumido por qualquer pessoa, dos 5 a 85 anos, independente de sua profissão. Ele literalmente vai desbloquear sua comunicação, eliminando por completo vícios de linguagem, e tornando sua comunicação clara, assertiva e persuasiva"
     },
     {
         question: "E se eu não gostar?",
-        answer: "Você tem uma garantia incondicional de 7 dias."
+        answer: "Você terá dias de garantia incondicional após a compra. Se você achar que não é pra você, é só solicitar reembolso. Sem perguntas, sem burocracia."
     },
     {
         question: "Como receberei o acesso?",
-        answer: "Assim que o seu pagamento for aprovado, os dados de acesso chegarão diretamente no seu e-mail."
+        answer: "O acesso será enviado imediatamente após a sua compra em seu e-mail e também no seu WhatsApp! Caso não tenha recebido, verifique o seu spam. Se necessário, entre em contato com nosso suporte."
     },
     {
         question: "Qual o contato do suporte?",
-        answer: "O e-mail para suporte é: suporte@giovannibegossi.com"
+        answer: "Nosso suporte atende em horário comercial (08h às 19h de Segunda a Sexta) diretamente no WhatsApp +55 11 96494-2986"
     },
     {
         question: "Por quanto tempo terei acesso?",
