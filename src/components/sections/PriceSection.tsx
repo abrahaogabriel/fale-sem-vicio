@@ -7,7 +7,7 @@ import imgCheckYellow from "../../assets/check_yellow.svg";
 // Image for the Price Box Logo (from public folder)
 const PriceLogo = () => (
     <img
-        src="/logo-fale.png"
+        src="logo-fale.png"
         alt="Fale sem vício"
         className="w-[200px] sm:w-[280px] h-auto"
     />
