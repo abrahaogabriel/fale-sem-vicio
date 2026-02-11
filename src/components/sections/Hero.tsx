@@ -134,7 +134,7 @@ export function Hero() {
                                 <img
                                     src={imgArrow}
                                     alt="Arrow"
-                                    className="w-full h-full transition-transform group-hover:translate-x-1"
+                                    className="w-full h-full transition-transform group-hover:translate-x-1 rotate-180"
                                 />
                             </div>
                         </a>
