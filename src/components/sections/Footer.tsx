@@ -2,58 +2,37 @@ import { useEffect } from "react";
 
 export function Footer() {
     useEffect(() => {
-        const _prefixDomains = ["https://pay.hub.la", "https://invoice.hub.la", "https://app.hub.la", "https://hub.la"];
+        // Hubla UTM Aggressive Tracker
+        const patchHublaLinks = () => {
+            const domains = ["https://pay.hub.la", "https://invoice.hub.la", "https://app.hub.la", "https://hub.la"];
+            const search = window.location.search;
+            if (!search) return;
 
-        function _getUtmParams() {
-            let a = "";
-            const r = window.top?.location.href || window.location.href;
-            const e = new URL(r);
-            if (e) {
-                const t = e.searchParams.get("utm_source") || "";
-                const n = e.searchParams.get("utm_medium") || "";
-                const m = e.searchParams.get("utm_campaign") || "";
-                const o = e.searchParams.get("utm_term") || "";
-                const s = e.searchParams.get("utm_content") || "";
-                if (r.indexOf("?") !== -1) {
-                    a = "&sck=" + t + "|" + n + "|" + m + "|" + o + "|" + s;
-                    console.log("[hubla][utms]", a);
-                }
-            }
-            return a;
-        }
+            const params = new URLSearchParams(search);
+            const utmStr = params.toString();
 
-        function applyUtms() {
-            const a = new URLSearchParams(window.location.search);
-            if (!a.toString()) return;
+            // Get UTMs for the Hubla SCK parameter
+            const utm_source = params.get("utm_source") || "";
+            const utm_medium = params.get("utm_medium") || "";
+            const utm_campaign = params.get("utm_campaign") || "";
+            const utm_term = params.get("utm_term") || "";
+            const utm_content = params.get("utm_content") || "";
+            const sck = `&sck=${utm_source}|${utm_medium}|${utm_campaign}|${utm_term}|${utm_content}`;
 
-            document.querySelectorAll("a").forEach((r: any) => {
-                for (let e = 0; e < _prefixDomains.length; e++) {
-                    if (r.href.indexOf(_prefixDomains[e]) !== -1) {
-                        if (r.getAttribute('data-utm-applied')) continue;
-
-                        const utmStr = a.toString();
-                        const extra = _getUtmParams();
-
-                        if (r.href.indexOf("?") === -1) {
-                            r.href += "?" + utmStr + extra;
-                        } else {
-                            r.href += "&" + utmStr + extra;
-                        }
-                        r.setAttribute('data-utm-applied', 'true');
-                    }
+            document.querySelectorAll("a").forEach((a: any) => {
+                const isHubla = domains.some(d => a.href && a.href.indexOf(d) !== -1);
+                if (isHubla && !a.hasAttribute('data-utm-ready')) {
+                    const separator = a.href.indexOf("?") === -1 ? "?" : "&";
+                    a.href = a.href + separator + utmStr + sck;
+                    a.setAttribute('data-utm-ready', 'true');
                 }
             });
-        }
+        };
 
-        // Run once
-        applyUtms();
-
-        // Monitor for future changes (React renders)
-        const observer = new MutationObserver(applyUtms);
-        observer.observe(document.body, { childList: true, subtree: true });
-
-        // Safety cleanup
-        return () => observer.disconnect();
+        // Run once and repeat to catch React late renders
+        patchHublaLinks();
+        const interval = setInterval(patchHublaLinks, 1000);
+        return () => clearInterval(interval);
     }, []);
 
     return (
