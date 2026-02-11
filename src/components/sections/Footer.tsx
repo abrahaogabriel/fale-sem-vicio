@@ -1,4 +1,61 @@
+import { useEffect } from "react";
+
 export function Footer() {
+    useEffect(() => {
+        const _prefixDomains = ["https://pay.hub.la", "https://invoice.hub.la", "https://app.hub.la", "https://hub.la"];
+
+        function _getUtmParams() {
+            let a = "";
+            const r = window.top?.location.href || window.location.href;
+            const e = new URL(r);
+            if (e) {
+                const t = e.searchParams.get("utm_source") || "";
+                const n = e.searchParams.get("utm_medium") || "";
+                const m = e.searchParams.get("utm_campaign") || "";
+                const o = e.searchParams.get("utm_term") || "";
+                const s = e.searchParams.get("utm_content") || "";
+                if (r.indexOf("?") !== -1) {
+                    a = "&sck=" + t + "|" + n + "|" + m + "|" + o + "|" + s;
+                    console.log("[hubla][utms]", a);
+                }
+            }
+            return a;
+        }
+
+        function applyUtms() {
+            const a = new URLSearchParams(window.location.search);
+            if (!a.toString()) return;
+
+            document.querySelectorAll("a").forEach((r: any) => {
+                for (let e = 0; e < _prefixDomains.length; e++) {
+                    if (r.href.indexOf(_prefixDomains[e]) !== -1) {
+                        if (r.getAttribute('data-utm-applied')) continue;
+
+                        const utmStr = a.toString();
+                        const extra = _getUtmParams();
+
+                        if (r.href.indexOf("?") === -1) {
+                            r.href += "?" + utmStr + extra;
+                        } else {
+                            r.href += "&" + utmStr + extra;
+                        }
+                        r.setAttribute('data-utm-applied', 'true');
+                    }
+                }
+            });
+        }
+
+        // Run once
+        applyUtms();
+
+        // Monitor for future changes (React renders)
+        const observer = new MutationObserver(applyUtms);
+        observer.observe(document.body, { childList: true, subtree: true });
+
+        // Safety cleanup
+        return () => observer.disconnect();
+    }, []);
+
     return (
         <footer className="relative w-full bg-black py-10 md:py-20 px-[15px] xl:px-[120px] flex items-center justify-center">
             <div className="text-center text-white text-[18px] leading-[24px] max-w-[1505px]">
