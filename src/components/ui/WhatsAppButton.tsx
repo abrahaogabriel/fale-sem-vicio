@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 
 export function WhatsAppButton() {
-    const whatsappUrl = "https://wa.me/5511937607834?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20atendente.";
+    const message = "Olá, vim da página do Fale Sem Vício e gostaria de saber mais!";
+    const whatsappUrl = `https://wa.me/5511937607834?text=${encodeURIComponent(message)}`;
 
     return (
         <motion.a
